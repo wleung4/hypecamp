@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL']%>
   database: hypecamp_production
   username: hypecamp
   password: <%= ENV["HYPECAMP_DATABASE_PASSWORD"] %>
