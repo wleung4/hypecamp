@@ -1,6 +1,6 @@
 class Api::SessionsController < ApplicationController
 
-  before_action :require_logged_in, only: [:destroy]
+#   before_action :require_logged_in, only: [:destroy]
   
   def show
 	@user = current_user
@@ -26,7 +26,7 @@ class Api::SessionsController < ApplicationController
   end
 
   def destroy
-	logout
+	logout if logged_in
 	render json: { message: 'success' }
   end
 end
