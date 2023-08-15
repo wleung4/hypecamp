@@ -13,9 +13,6 @@ function App() {
 			<Navigation />
 			<h2>Home</h2>
 			<Switch>
-				<Route path ="/signup">
-					<SignupForm />
-				</Route>
 				<Redirect to='/' />
 			</Switch>
 		</div>

@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import LoginFormModal from "../LoginForm/LoginFormModal";
 import SignupFormModal from "../SignupForm/SignupFormModal";
 import './Navigation.css';
+import logo from '../../assets/hypecamp.png';
 
 const Navigation = () => {
 	const sessionUser = useSelector(state => state.session.user);
@@ -26,9 +27,7 @@ const Navigation = () => {
 	return (
 		<nav className="navbar">
 			<NavLink exact to='/'>
-			{/*  */}
-			{/* <img src={'../../assets/hipcamp-logo.png'} /> */}
-				<div className="logo">Hypecamp Logo</div>
+				<img src={logo} className="logo"/>
 			</NavLink>
 			<div className="links">
 				{sessionLinks}
