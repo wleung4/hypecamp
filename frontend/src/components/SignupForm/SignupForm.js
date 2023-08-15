@@ -18,6 +18,10 @@ const SignupForm = () => {
 
 	if (sessionUser) return <Redirect to="/" />;
 
+	const validate = () => {
+		const validationErrors = [];
+	}
+
 	const handleSubmit = e => {
 		e.preventDefault();
 		if(password === confirmPassword) {
