@@ -30,19 +30,17 @@ const SignupForm = () => {
 					} catch {
 						data = await res.text();
 					}
+					console.log(data);
 					if (data?.errors) setErrors(data.errors);
-					else if (data) setErrors([data]);
+					else if (data) setErrors(data);
 					else setErrors([res.statusText]);
 				})
-				return setErrors(['Confirm password doesnt match password']);
-		}
+			} 
+			return setErrors(['Confirm password doesnt match password']);
 	}
 
 	return (
 		<form onSubmit={handleSubmit} className='form'>
-			<ul>
-				{errors.map(error => <li key={error}>{error}</li>)}
-			</ul>
 			<div className='signup-header'>
 				Sign up to continue
 			</div>
@@ -75,6 +73,15 @@ const SignupForm = () => {
 					</Modal>
 				)}
 			</div>
+			<ul>
+				{/* {errors.map(error => {
+					// console.log(errors);
+					return <li key={error} className='errors'>{error}</li>}
+				)} */}
+				{errors && (
+					<li key={errors[0]} className='errors'>{errors[0]}</li>
+				)}
+			</ul>
 		</form>
 	)
 }

@@ -72,3 +72,8 @@ label {
 	align-self: flex-start;
 	text-align: left;
 }
+
+.errors {
+	color: red;
+	text-decoration: none;
+}

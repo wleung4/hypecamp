@@ -47,9 +47,6 @@ const LoginForm = () => {
 			<div className='login-terms'>
 				By continuing, you agree to Hypecamp's terms of use and privacy policy.
 			</div>
-			<ul>
-				{errors.map(error => <li key={error}>{error}</li>)}
-			</ul>
 			<label>
 				<input type="text" value={email} placeholder='Email Address' onChange={e => setEmail(e.target.value)} required/>
 			</label>
@@ -70,6 +67,9 @@ const LoginForm = () => {
 					</Modal>
 			)}
 			</div>
+			<ul>
+				{errors.map(error => <li key={error} className='errors'>{error}</li>)}
+			</ul>
 		</form>
 	)
 }
