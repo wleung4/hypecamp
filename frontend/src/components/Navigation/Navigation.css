@@ -1,0 +1,26 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	height: 75px;
+	width: 90vw;
+	padding-top: 10px;
+	box-sizing: border-box;
+}
+
+.links {
+	/* padding-right: 100px; */
+	justify-content: space-between;
+}
+
+.logo {
+	height: 50px;
+	width: 150px;
+	background-color: aqua;
+	display: flex;
+	align-items: center;
+}
+
+.logo:hover {
+	cursor: pointer;
+}
+

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import * as sessionActions from '../../store/sessionReducer';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import './LoginForm.css';
 
 const LoginForm = () => {
 	const dispatch = useDispatch();
@@ -26,18 +28,40 @@ const LoginForm = () => {
 			})
 	}
 
+	const handleDemo = e => {
+		e.preventDefault();
+		dispatch(sessionActions.login({ email: 'demo@user.io', password: 'password'}))
+	}
+
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} className='form'>
+			<div className='login-form-header'>
+				Log in to continue
+			</div>
+			<div className='login-form-sub'>
+				Welcome back! Let's get you outside.
+			</div>
+			<div className='login-terms'>
+				By continuing, you agree to Hypecamp's terms of use and privacy policy.
+			</div>
 			<ul>
 				{errors.map(error => <li key={error}>{error}</li>)}
 			</ul>
-			<label>Email
-				<input type="text" value={email} onChange={e => setEmail(e.target.value)} required/>
+			<label>
+				<input type="text" value={email} placeholder='Email Address' onChange={e => setEmail(e.target.value)} required/>
 			</label>
-			<label>Password
-				<input type="password" value={password} onChange={e => setPassword(e.target.value)} required/>
+			<label>
+				<input type="password" placeholder='Password' value={password} onChange={e => setPassword(e.target.value)} required/>
 			</label>
-			<button>Log in</button>
+			<div className='button-div'>
+				<button className='modal-button'>Log in</button>
+			</div>
+			<div className='button-div' onClick={handleDemo}>
+				<button className='modal-button'>Demo Log in</button>
+			</div>
+			<div className='footer-link'>
+				Don't have an account? <Link>Sign up</Link>
+			</div>
 		</form>
 	)
 }

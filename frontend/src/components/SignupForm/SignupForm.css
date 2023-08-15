@@ -2,17 +2,19 @@ label {
 	display: block;
 }
 
-.login-button {
+.signup-button {
+	border-radius: 8px;
 	border: none;
 	padding: 10px 24px;
 	font-size: 18px;
 	font-weight: 500;
-	background-color: inherit;
+	background-color: #464F2E;
+	color: white;
 }
 
-.login-button:hover {
-	text-decoration: underline;
+.signup-button:hover {
 	cursor: pointer;
+	background-color: #212516;
 }
 
 .modal-button {
@@ -30,7 +32,7 @@ label {
 
 .button-div {
 	padding-top: 6px;
-	padding-bottom: 6px;
+	padding-bottom: 12px;
 }
 
 .modal-button:hover {
@@ -46,7 +48,7 @@ label {
 	padding: 24px 12px;
 }
 
-.login-form-header {
+.signup-header {
 	font-size: 48px;
 	font-weight: 700;
 	align-self: flex-start;
@@ -54,14 +56,14 @@ label {
 	padding-bottom: 30px;
 }
 
-.login-form-sub {
+.signup-sub {
 	align-self: flex-start;
 	text-align: left;
 	padding-bottom: 24px;
 	font-size: 18px;
 }
 
-.login-terms {
+.signup-terms {
 	align-self: flex-start;
 	text-align: left;
 	padding-bottom: 20px;

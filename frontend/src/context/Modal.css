@@ -7,6 +7,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	box-shadow: 10px 10px;
+	
   }
   
   #modal-background {
@@ -15,10 +17,29 @@
 	right: 0;
 	left: 0;
 	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.25);
   }
   
   #modal-content {
 	position: absolute;
 	background-color:white;
+	border-radius: 10px;
+	height: 600px;
+	width: 600px;
+	display: flex;
+	justify-content: center;
+
+  }
+
+  #modal-content input {
+	height: 32px;
+	width: 500px;
+	padding: 12px;
+	border-radius: 10px;
+	border: 1px solid rgb(183, 179, 179);
+	font-size: 18px;
+  }
+
+  #modal-content label {
+	padding: 6px;
   }
