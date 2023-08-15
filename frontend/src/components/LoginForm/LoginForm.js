@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import * as sessionActions from '../../store/sessionReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { Modal } from '../../context/Modal';
+import SignupForm from '../SignupForm/SignupForm';
 import './LoginForm.css';
 
 const LoginForm = () => {
@@ -10,6 +12,7 @@ const LoginForm = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [errors, setErrors] = useState([]);
+	const [signupModal, setSignupModal] = useState(false);
 
 	const handleSubmit = e => {
 		e.preventDefault();
@@ -60,7 +63,12 @@ const LoginForm = () => {
 				<button className='modal-button'>Demo Log in</button>
 			</div>
 			<div className='footer-link'>
-				Don't have an account? <Link>Sign up</Link>
+				Don't have an account? <Link to='#'onClick={() => setSignupModal(true)}>Sign up</Link>
+				{signupModal && (
+					<Modal onClose={() => setSignupModal(false)}>
+						<SignupForm />
+					</Modal>
+			)}
 			</div>
 		</form>
 	)

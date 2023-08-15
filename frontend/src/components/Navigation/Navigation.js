@@ -25,10 +25,11 @@ const Navigation = () => {
 
 	return (
 		<nav className="navbar">
-			<div className="logo">
-				{/* <img src={'../../assets/hipcamp-logo.png'} /> */}
-				<NavLink exact to='/'>Hypecamp Logo</NavLink>
-			</div>
+			<NavLink exact to='/'>
+			{/*  */}
+			{/* <img src={'../../assets/hipcamp-logo.png'} /> */}
+				<div className="logo">Hypecamp Logo</div>
+			</NavLink>
 			<div className="links">
 				{sessionLinks}
 			</div>

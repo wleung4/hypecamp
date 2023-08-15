@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import * as sessionActions from '../../store/sessionReducer';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import LoginForm from '../LoginForm/LoginForm';
+import { Modal } from '../../context/Modal';
 
 const SignupForm = () => {
 	const dispatch = useDispatch();
@@ -12,6 +14,7 @@ const SignupForm = () => {
 	const [password, setPassword] = useState('');
 	const [confirmPassword, setConfirmPassword] = useState('');
 	const [errors, setErrors] = useState([]);
+	const [loginModal, setLoginModal] = useState(false);
 
 	if (sessionUser) return <Redirect to="/" />;
 
@@ -65,7 +68,12 @@ const SignupForm = () => {
 				<button className='modal-button'>Sign Up</button>
 			</div>
 			<div className='footer-link'>
-				Already have an account? <Link>Log in</Link>
+				Already have an account? <Link to='#'onClick={() => setLoginModal(true)}>Log in</Link>
+				{loginModal && (
+					<Modal onClose={() => setLoginModal(false)}>
+						<LoginForm />
+					</Modal>
+				)}
 			</div>
 		</form>
 	)
