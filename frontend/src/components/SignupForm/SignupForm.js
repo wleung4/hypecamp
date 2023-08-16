@@ -37,7 +37,7 @@ const SignupForm = () => {
 					else if (data) setErrors(data);
 					else setErrors([res.statusText]);
 				})
-			} else if (errors.length > 0) {
+			} else if (errors.length === 0) {
 				setErrors(['Confirm password doesnt match password']);
 			}
 	}
