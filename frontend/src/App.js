@@ -1,23 +1,11 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import SignupForm from './components/SignupForm/SignupForm';
-import Navigation from './components/Navigation/Navigation';
-import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
-// import Splash from './components/Splash/Splash';
-// import RegisterForm from './components/RegisterForm/RegisterForm';
+import Splash from './components/Splash/Splash';
 
 function App() {
   return (
 	<>	
-		<div className='background'>
-			<Navigation />
-			<h2>Home</h2>
-			<Switch>
-				<Redirect to='/' />
-			</Switch>
-		</div>
-	</>
-	
+		<Splash />
+	</>	
   );
 }
 

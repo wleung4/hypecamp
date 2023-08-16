@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './reset.css';
 import './index.css';
 import App from './App';
-import configureStore from './store/index';
+import configureStore from './store/store';
 import csrfFetch from './store/csrf';
 import * as sessionActions from './store/sessionReducer';
 import { ModalProvider } from './context/Modal';

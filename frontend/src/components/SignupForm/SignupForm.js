@@ -18,7 +18,7 @@ const SignupForm = () => {
 
 	if (sessionUser) return <Redirect to="/" />;
 
-	const validationErrors = ['Email has already been taken', 'Username has already been taken', 'Confirm password doesnt match password'];
+	// const validationErrors = ['Email has already been taken', 'Username has already been taken', 'Confirm password doesnt match password'];
 
 	const handleSubmit = e => {
 		e.preventDefault();
