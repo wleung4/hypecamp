@@ -5,8 +5,9 @@ import * as sessionActions from '../../store/sessionReducer';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import LoginForm from '../LoginForm/LoginForm';
 import { Modal } from '../../context/Modal';
+import { activateSessionModal, deactivateSignupModal } from '../../store/uiReducer';
 
-const SignupForm = () => {
+const SignupForm = ({ onClose }) => {
 	const dispatch = useDispatch();
 	const sessionUser = useSelector(state => state.session.user);
 	const [email, setEmail] = useState('');
@@ -15,6 +16,7 @@ const SignupForm = () => {
 	const [confirmPassword, setConfirmPassword] = useState('');
 	const [errors, setErrors] = useState([]);
 	const [loginModal, setLoginModal] = useState(false);
+	// const display = useSelector(state => state.ui);
 
 	if (sessionUser) return <Redirect to="/" />;
 
@@ -41,6 +43,15 @@ const SignupForm = () => {
 				setErrors(['Confirm password doesnt match password']);
 			}
 	}
+
+	// const handleLoginClick = e => {
+	// 	e.stopPropagation();
+	// 	dispatch(deactivateSignupModal());
+	// 	dispatch(activateSessionModal());
+	// 	setLoginModal(true);
+	// }
+
+	// if(!display.signupModal) return null;
 
 	return (
 		<form onSubmit={handleSubmit} className='form'>
@@ -71,8 +82,8 @@ const SignupForm = () => {
 			<div className='footer-link'>
 				Already have an account? <Link to='#'onClick={() => setLoginModal(true)}>Log in</Link>
 				{loginModal && (
-					<Modal onClose={() => setLoginModal(false)}>
-						<LoginForm />
+					<Modal onClose={onClose}>
+						<LoginForm onClose={onClose} />
 					</Modal>
 				)}
 			</div>
