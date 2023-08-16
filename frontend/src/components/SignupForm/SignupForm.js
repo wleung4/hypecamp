@@ -18,9 +18,7 @@ const SignupForm = () => {
 
 	if (sessionUser) return <Redirect to="/" />;
 
-	const validate = () => {
-		const validationErrors = [];
-	}
+	const validationErrors = ['Email has already been taken', 'Username has already been taken', 'Confirm password doesnt match password'];
 
 	const handleSubmit = e => {
 		e.preventDefault();
@@ -39,8 +37,9 @@ const SignupForm = () => {
 					else if (data) setErrors(data);
 					else setErrors([res.statusText]);
 				})
-			} 
-			return setErrors(['Confirm password doesnt match password']);
+			} else if (errors.length > 0) {
+				setErrors(['Confirm password doesnt match password']);
+			}
 	}
 
 	return (
@@ -82,7 +81,10 @@ const SignupForm = () => {
 					// console.log(errors);
 					return <li key={error} className='errors'>{error}</li>}
 				)} */}
-				{errors && (
+				{/* {errors && validationErrors.includes(errors[0]) && (
+					<li key={errors[0]} className='errors'>{errors[0]}</li>
+				)} */}
+				{errors.length > 0 && (
 					<li key={errors[0]} className='errors'>{errors[0]}</li>
 				)}
 			</ul>
