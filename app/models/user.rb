@@ -19,6 +19,15 @@ class User < ApplicationRecord
 	validates :username, length: { in: 3..30 },  format: { without: URI::MailTo::EMAIL_REGEXP, message: "cant be an email" }
 	validates :password, length: { in: 6..255 }, allow_nil: true
 
+	has_many :spots,
+		dependent: :destroy
+
+	has_many :bookings,
+		dependent: :destroy
+
+	has_many :reviews
+		dependent: :destroy
+
 	before_validation :ensure_session_token
 
 	def self.find_by_credentials(email, password) 
