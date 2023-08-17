@@ -15,5 +15,5 @@ class Amenity < ApplicationRecord
 
 	has_many :spots,
 		through: :spot_amenities,
-		source: :spot,
+		source: :spot
 end
