@@ -23,16 +23,33 @@ ApplicationRecord.transaction do
 	)
 
 	User.create!(
-		email: 'weyman@gmai.com', 
+		email: 'weyman@gmail.com', 
 		username: 'itsweyman', 
 		password: 'password'
-	  )
+	)
+	
+	User.create!(
+		email: 'justin@aol.com', 
+		username: 'thejustin', 
+		password: 'password'
+	)
 
+	User.create!(
+		email: 'terence@hotmail.com', 
+		username: 'tDawg', 
+		password: 'password'
+	)
+
+	User.create!(
+		email: 'piratefire@yahoo.com', 
+		username: 'modernpirate', 
+		password: 'password'
+	)
 	puts "Creating spots..."
 
 	Spot.create!(
 		user_id: 1, 
-		name: "Cabin in the Forest", 
+		name: "Yosemite Pines Cabin", 
 		address: "Yosemite National Park", 
 		city: "Groveland", 
 		country: "United States", 
@@ -88,6 +105,66 @@ ApplicationRecord.transaction do
 		capacity: 30, 
 		price: 34,
 		description: "This campground in Northern California boasts a great view of the bodies of water."
+	)
+
+	Spot.create!(
+		user_id: 3, 
+		name: "Lake McSwain Campground", 
+		address: "9090 Lake McClure Rd", 
+		city: "Snelling", 
+		country: "United States", 
+		state: "California", 
+		zip_code: 95369, 
+		longitude: -120.27780240482453, 
+		latitude: 37.6083011523901,
+		capacity: 28, 
+		price: 49,
+		description: "Campground home to Lake McSwain."
+	)
+	
+	Spot.create!(
+		user_id: 5, 
+		name: "Woodward Reservoir Regional Park", 
+		address: "14528 26 Mile Rd", 
+		city: "Oakdale", 
+		country: "United States", 
+		state: "California", 
+		zip_code: 95361, 
+		longitude: -120.86738826669885,
+		latitude: 37.869667842554854,
+		capacity: 48, 
+		price: 25,
+		description: "Surrounded by the amazing Woodward Reservoir. Experience the amazing sunrise and sunset."
+	)
+
+	Spot.create!(
+		user_id: 5, 
+		name: "Sycamore Canyon Campground", 
+		address: "9000 Pacific Coast Hwy", 
+		city: "Malibu", 
+		country: "United States", 
+		state: "California", 
+		zip_code: 90265, 
+		longitude: -118.99820597551833,
+		latitude: 34.079761575280905,
+		capacity: 76, 
+		price: 59,
+		description: "Sycamore Canyon Campground is home the big canyon located in Malibu, California"
+	)
+	
+	Spot.create!(
+		user_id: 1, 
+		name: "Yogi Bear's Jellystone Park Camp-Resort", 
+		address: "14900 CA-12", 
+		city: "Lodi", 
+		country: "United States", 
+		state: "California", 
+		zip_code: 95242, 
+		longitude: -121.497915416559,
+		latitude: 38.11054914940152, 
+		capacity: 100, 
+		price: 349,
+		description: "Enjoy the life in a cabin as well as playing in the resort at Yogi Bear's Jellystone Park Camp-Resort!"
 	)
 
 	puts "Done!"

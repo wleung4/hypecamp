@@ -2,6 +2,7 @@
 /* index */
 .spots-index-page {
 	display: flex;
+	padding-top: 10vh;
 }
 
 .spots-index {
@@ -13,10 +14,12 @@
 }
 
 .spots-index-map {
-	width: 50vw;
-	height: 99vh;
+	width: 46vw;
+	height: 90vh;
 	background-color: aquamarine;
 	border: 1px solid black;
+	position: fixed;
+	right: 2vw;
 }
 
 
@@ -49,7 +52,7 @@
 }
 
 .spot-name {
-	font-size: 22px;
+	font-size: 20px;
 	color: black;
 	text-decoration: none;
 

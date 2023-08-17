@@ -27,7 +27,7 @@ const SpotIndex = () => {
 				</div>
 
 				<div className='spots-index-map'>
-
+					MAP
 				</div>
 			</div>
 		</>

@@ -1,14 +1,17 @@
 .navbar {
 	display: flex;
 	justify-content: space-between;
-	height: 75px;
-	width: 90vw;
+	height: 10vh;
+	width: 100vw;
 	padding-top: 10px;
 	box-sizing: border-box;
+	background-color: #F3F2EF;
+	position: fixed;
+	z-index: 600;
 }
 
 .links {
-	/* padding-right: 100px; */
+	padding-right: 10vw;
 	justify-content: space-between;
 }
 

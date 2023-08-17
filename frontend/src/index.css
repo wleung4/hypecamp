@@ -15,4 +15,5 @@
 	box-sizing: border-box;
 	font-family: 'Calibre Web';
 	overflow: auto;
+	z-index: 50;
 }
