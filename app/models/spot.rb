@@ -22,7 +22,7 @@ class Spot < ApplicationRecord
 		:zip_code, :longitude, :latitude, :capacity, :price, presence: true
 
 	belongs_to :owner,
-		foreign_key: :user_id
+		foreign_key: :user_id,
 		class_name: :User
 	
 	has_many :bookings,
