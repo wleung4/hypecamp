@@ -19,7 +19,7 @@
 #
 class Spot < ApplicationRecord
 	validates :user_id, :name, :address, :city, :country, :state, 
-		:zip_code, :longitude, :latitude, :capacity, :price, presence: true
+		:zip_code, :longitude, :latitude, :capacity, :price, :description, presence: true
 
 	belongs_to :owner,
 		foreign_key: :user_id,

@@ -11,17 +11,19 @@
 .search-bar {
 	display: flex;
 	justify-content: space-between;
+	align-items: start;
 }
 
 .search {
-	width: 25vw;
+	width: 20vw;
 	height: 60px;
 	border: 1px solid lightgray;
 	border-radius: 12px;
+	padding-left: 10px;
 }
 
 .search-dates {
-	width: 18vw;
+	width: 20vw;
 	height: 60px;
 	border: 1px solid lightgray;
 	border-radius: 12px;
@@ -30,7 +32,7 @@
 }
 
 .search-guests {
-	width: 18vw;
+	width: 16vw;
 	height: 60px;
 	border: 1px solid lightgray;
 	border-radius: 12px;
@@ -39,7 +41,7 @@
 }
 
 .search-button {
-	width: 5vw;
+	width: 8vw;
 	height: 60px;
 	border: 1px solid lightgray;
 	border-radius: 12px;
@@ -49,5 +51,9 @@
 
 .search-dates:hover, .search-guests:hover, .search-button{
 	cursor: pointer;
+}
+
+.search, .search-dates, .search-guests, .search-button {
+	font-size: 18px;
 }
 

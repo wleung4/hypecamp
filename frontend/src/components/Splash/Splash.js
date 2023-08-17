@@ -6,12 +6,16 @@ import './Splash.css';
 import Search from '../Search/Search';
 import LoginFormModal from '../LoginForm/LoginFormModal';
 import SignupFormModal from '../SignupForm/SignupFormModal';
+import LoginForm from '../LoginForm/LoginForm';
+import SignupForm from '../SignupForm/SignupForm';
 
 const Splash = () => {
 	// const [loggedIn, setLoggedIn] = useState(false);
 
 	return (
 		<>	
+			<LoginForm />
+			<SignupForm />
 			<div className='background'>
 				<Navigation />
 				{/* {loggedIn && }
@@ -26,14 +30,11 @@ const Splash = () => {
 						campsites—found only on Hypecamp.
 					</h2>
 				</div>
-				
+								
 				<div className='search-div'>
 					<Search />
-				</div>
+				</div> 
 				
-				<Switch>
-					<Redirect to='/' />
-				</Switch>
 			</div>
 		</>
 		

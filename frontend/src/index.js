@@ -8,6 +8,7 @@ import App from './App';
 import configureStore from './store/store';
 import csrfFetch from './store/csrf';
 import * as sessionActions from './store/sessionReducer';
+import * as spotActions from './store/spotReducer';
 import { ModalProvider } from './context/Modal';
 
 const store = configureStore();
@@ -16,6 +17,7 @@ if (process.env.NODE_ENV !== 'production') {
 	window.store = store;
 	window.csrfFetch = csrfFetch;
 	window.sessionActions = sessionActions;
+	window.spotActions = spotActions;
 }
 
 function Root() {
@@ -23,7 +25,7 @@ function Root() {
 	  <ModalProvider>
 		<Provider store={store}>
 			<BrowserRouter>
-			<App />
+				<App />
 			</BrowserRouter>
 		</Provider>
 	  </ModalProvider>
