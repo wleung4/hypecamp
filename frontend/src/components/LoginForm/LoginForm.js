@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import * as sessionActions from '../../store/sessionReducer';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { Modal } from '../../context/Modal';
 import SignupForm from '../SignupForm/SignupForm';
 import './LoginForm.css';
-import { activateSignupModal, deactivateSessionModal } from '../../store/uiReducer';
+// import { activateSignupModal, deactivateSessionModal } from '../../store/uiReducer';
 
 const LoginForm = ({ onClose }) => {
 	const dispatch = useDispatch();

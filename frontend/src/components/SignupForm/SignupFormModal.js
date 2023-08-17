@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Modal } from '../../context/Modal';
 import SignupForm from './SignupForm';
 import './SignupForm.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { activateSignupModal, deactivateSessionModal } from '../../store/uiReducer';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { activateSignupModal, deactivateSessionModal } from '../../store/uiReducer';
 
 const SignupFormModal = ({ onClose }) => {
 	const [showModal, setShowModal] = useState(false);
