@@ -8,9 +8,11 @@
 ApplicationRecord.transaction do 
 	puts "Destroying tables..."
 	User.destroy_all
-  
+	Spot.destroy_all
+
 	puts "Resetting primary keys..."
 	ApplicationRecord.connection.reset_pk_sequence!('users')
+	ApplicationRecord.connection.reset_pk_sequence!('spots')
   
 	puts "Creating users..."
 
@@ -18,6 +20,21 @@ ApplicationRecord.transaction do
 	  email: 'demo@user.io', 
 	  username: 'Demo-lition', 
 	  password: 'password'
+	)
+
+	puts "Creating spots..."
+
+	Spot.create!(
+		user_id: 1, 
+		name: "Cabin in the Forest", 
+		address: "Yosemite National Park", 
+		city: "Groveland", country: "United States", 
+		state: "California", 
+		zip_code: 95389, 
+		longitude: -119.43048531205818, 
+		latitude: 37.90241769268008, 
+		capacity: 10, 
+		price: 100
 	)
 
 	puts "Done!"

@@ -37,4 +37,6 @@ class Spot < ApplicationRecord
 	has_many :amenities,
 		through: :spot_amenities,
 		source: :spot
+
+	has_many_attached :photos
 end
