@@ -5,7 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-ApplicationRecord.transaction do 
+require 'open-uri'
+
+
 	puts "Destroying tables..."
 	User.destroy_all
 	Spot.destroy_all
@@ -47,7 +49,7 @@ ApplicationRecord.transaction do
 	)
 	puts "Creating spots..."
 
-	Spot.create!(
+	spot1 = Spot.create!(
 		user_id: 1, 
 		name: "Yosemite Pines Cabin", 
 		address: "Yosemite National Park", 
@@ -61,6 +63,8 @@ ApplicationRecord.transaction do
 		price: 100,
 		description: "A small and cozy cabin located inside of Yosemite National Park."
 	)
+	file1 = URI.open('https://hypecamp-seeds.s3.us-west-1.amazonaws.com/cabin.jpg')
+	spot1.photos.attach(io: file1, filename: 'cabin.jpg')
 
 	Spot.create!(
 		user_id: 2, 
@@ -168,4 +172,3 @@ ApplicationRecord.transaction do
 	)
 
 	puts "Done!"
-  end

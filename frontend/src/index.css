@@ -8,12 +8,10 @@
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	height: 120%;
 	width: 100%;
 	background-color: #F3F2EF;
 	padding: 0px 24px;
 	box-sizing: border-box;
 	font-family: 'Calibre Web';
-	overflow: auto;
 	z-index: 50;
 }

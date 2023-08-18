@@ -13,8 +13,8 @@ const SpotIndex = () => {
 	}, [])
 
 	const handleSpots = () => {
-		const allSpots = Object.entries(spots).map(([id, spot]) => {
-			return <SpotIndexItem spot={spot}/>
+		const allSpots = Object.values(spots).map(spot => {
+			return <SpotIndexItem key={spot.id} spot={spot}/>
 		})
 		return allSpots
 	}
@@ -27,7 +27,7 @@ const SpotIndex = () => {
 				</div>
 
 				<div className='spots-index-map'>
-					MAP
+					
 				</div>
 			</div>
 		</>

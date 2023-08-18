@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './Spot.css';
 
 const SpotIndexItem = ({ spot }) => {
-	
+
 	return (
 		<>
 			<div className='container'>
 				<div className='spots-index-item'>
-					<div className='item-photo'>
-
-					</div>
+					<img src={spot.photoUrls[0]} className='item-photo'/>
+			
 					<div className='text-container'>
 						<Link to={`/spots/${spot.id}`} className='spot-name'>
 							{spot.name}

@@ -13,5 +13,6 @@
 		json.capacity spot.capacity
 		json.price spot.price
 		json.description spot.description
+		json.photoUrls spot.photos.map { |file| url_for(file) }
 	end
 end
