@@ -3,6 +3,7 @@
 .spots-index-page {
 	display: flex;
 	padding-top: 10vh;
+	background-color: #F3F2EF;
 }
 
 .spots-index {
@@ -11,16 +12,16 @@
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-
+	padding-left: 1vw;
 }
 
 .spots-index-map {
-	width: 46vw;
+	width: 48vw;
 	height: 90vh;
 	background-color: aquamarine;
 	border: 1px solid black;
 	position: fixed;
-	right: 2vw;
+	right: 0;
 	overflow-y: hidden;
 }
 
@@ -48,7 +49,7 @@
 	border: 1px solid black;
 	width: 20vw;
 	height: 20vw;
-	padding: 10px 10px;
+	padding: 10px 24px;
 	background-color: lightgray;
 }
 
@@ -71,4 +72,79 @@
 .price {
 	font-size: 22px;
 	color: black;
+}
+
+/* show */
+.show-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 10vh;
+	background-color: #F3F2EF;
+}
+
+.header-info {
+	border: 1px solid black;
+	height: 58vh;
+	width: 76vw;
+}
+
+.show-header {
+	text-align: left;
+	font-size: 48px;
+	font-weight: 700;
+}
+
+.header-info, .show-photos, .show-description, 
+.show-map, .show-reviews {
+	border: 1px solid black;
+	padding: 10px 10px;
+}
+
+.show-photos {
+	height: 58vh;
+	width: 76vw;
+	display: flex;
+}
+
+.big-photo {
+	border: 1px solid black;
+	height: 100%;
+	width: 100%;
+}
+.main-photo {
+	border-radius: 16px;
+	border: 1px solid black;
+	height: 58vh;
+	width: 38vw;
+}
+
+.other-photos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	border: 1px solid black;
+}
+.secondary-photos {
+	height: 28vh;
+	width: 18vw;
+	border: 1px solid black;
+	border-radius: 16px;
+}
+
+.show-description {
+	height: 30vh;
+	width: 76vw;
+}
+
+.show-map {
+	height: 60vh;
+	width: 76vw;
+	background-color: aquamarine;
+}
+
+.show-reviews {
+	height: 30vh;
+	width: 76vw;
 }

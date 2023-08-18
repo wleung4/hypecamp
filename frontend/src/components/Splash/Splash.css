@@ -1,12 +1,12 @@
 .background {
-	position: absolute;
+	/* position: absolute;
 	top: 0px;
 	left: 0px;
-	width: 100%;
+	width: 100%; */
 	background-color: #F3F2EF;
-	padding: 0px 24px;
-	box-sizing: border-box;
+	/* padding: 0px 24px; */
 	font-family: 'Calibre Web';
+	height: 100vh;
 }
 
 .splash-text-div {
@@ -15,6 +15,7 @@
 	align-items: center;
 	color: #333121;
 	padding-top: 75px;
+	
 }
 
 .splash-text-header {

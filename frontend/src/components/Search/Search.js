@@ -8,9 +8,10 @@ const Search = () => {
 			<div className="search-background">
 				<div className='search-bar'>
 					<input className="search" placeholder="Search destinations"/>
-					<label className='search-dates'> Add dates </label>
-					<label className='search-guests'> Add guests </label>
-					<NavLink to='/spots' className='search-button'>Search</NavLink>
+					<button className='search-dates'> Add dates </button>
+					<button className='search-guests'> Add guests </button>
+					<NavLink to='/spots' className='search-button'>Search
+					</NavLink>
 				</div>
 			</div>
 		</>

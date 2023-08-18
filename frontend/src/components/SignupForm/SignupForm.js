@@ -5,7 +5,6 @@ import * as sessionActions from '../../store/sessionReducer';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import LoginForm from '../LoginForm/LoginForm';
 import { Modal } from '../../context/Modal';
-// import { activateSessionModal, deactivateSignupModal } from '../../store/uiReducer';
 
 const SignupForm = ({ onClose }) => {
 	const dispatch = useDispatch();

@@ -3,6 +3,7 @@ import './Spot.css';
 import { fetchSpots, getSpots } from '../../store/spotReducer';
 import { useEffect } from 'react';
 import SpotIndexItem from './SpotIndexItem';
+import Navigation from '../Navigation/Navigation';
 
 const SpotIndex = () => {
 	const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const SpotIndex = () => {
 
 	return (
 		<>
+			<Navigation />
 			<div className='spots-index-page'>
 				<div className='spots-index'>
 					{handleSpots()}
