@@ -15,7 +15,7 @@
 class Booking < ApplicationRecord
 	validates :spot_id, :user_id, :num_guests, :price, 
 		:start_date, :end_date, presence: true
-
+	
 	belongs_to :spot
 	belongs_to :user
 end

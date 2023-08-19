@@ -52,11 +52,9 @@
 	justify-content: center;
 	align-items: center;
 }
-
-/* .search-link {
-	text-decoration: none;
-	color: white;
-} */
+.search-button:hover {
+	background-color: #81311b;
+}
 
 .search-dates:hover, .search-guests:hover, .search-button{
 	cursor: pointer;

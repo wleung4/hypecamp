@@ -22,7 +22,6 @@
 	border: 1px solid black;
 	position: fixed;
 	right: 0;
-	overflow-y: hidden;
 }
 
 
@@ -56,7 +55,13 @@
 .text-container *{
 	margin-bottom: 4px;
 }
-
+.spot-rating {
+	display: flex;
+	flex-direction: row;
+}
+.rating {
+	font-size: 18px;
+}
 .spot-name {
 	font-size: 20px;
 	color: black;
@@ -81,13 +86,21 @@
 	justify-content: center;
 	align-items: center;
 	padding-top: 10vh;
-	background-color: #F3F2EF;
+	background-color: white;
+
+	> * {
+		margin-bottom: 1vh;
+	}
 }
 
+/* show header */
 .header-info {
-	border: 1px solid black;
-	height: 58vh;
+	/* border: 1px solid black; */
+	margin-top: 4vh;
+	height: 10vh;
 	width: 76vw;
+	display: flex;
+	flex-direction: column;
 }
 
 .show-header {
@@ -96,55 +109,168 @@
 	font-weight: 700;
 }
 
-.header-info, .show-photos, .show-description, 
+.show-header-text {
+	display: flex;
+	font-size: 16px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+
+	> p {
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+}
+
+.percentage, .num-reviews, .city-state {
+	font-size: 20px;
+}
+
+.percentage, .num-reviews {
+	font-weight: 500;
+}
+
+.num-reviews {
+	text-decoration: underline;
+}
+
+/* show photos */
+.show-description, .show-activities, .show-amenities,
 .show-map, .show-reviews {
 	border: 1px solid black;
-	padding: 10px 10px;
+	/* padding: 10px 10px; */
 }
 
 .show-photos {
 	height: 58vh;
 	width: 76vw;
 	display: flex;
+	margin-top: 2vh;
 }
 
 .big-photo {
 	border: 1px solid black;
 	height: 100%;
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .main-photo {
 	border-radius: 16px;
-	border: 1px solid black;
-	height: 58vh;
-	width: 38vw;
+	/* border: 1px solid black; */
+	height: 98%;
+	width: 98%;
 }
 
 .other-photos {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
-	border: 1px solid black;
+	justify-content: space-evenly;
+	align-items: center;
+	/* border: 1px solid black; */
+	height: 100%;
+	width: 100%;
+
 }
+
 .secondary-photos {
-	height: 28vh;
-	width: 18vw;
-	border: 1px solid black;
+	height: 46%;
+	width: 46%;
+	/* border: 1px solid black; */
 	border-radius: 16px;
+;
+}
+
+/* show description */
+.show-description-amenities {
+	height: 30vh;
+	width: 76vw;
+	font-size: 18px;
+	display: flex;
+
+	> * {
+		padding: 10px 10px;
+	}
 }
 
 .show-description {
+	width: 60%;
+	height: 90%;
+}
+
+.show-activities, .show-amenities {
+	width: 20%;
+	height: 90%;
+	border: 1px solid black;
+}
+
+/* show bookings */
+.bookings {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid black;
 	height: 30vh;
 	width: 76vw;
 }
 
+.text {
+	font-size: 40px;
+}
+
+.bookings-data {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+
+	> * {
+		cursor: pointer;
+		background-color: white;
+		border-radius: 10px;
+		text-align: left;
+		font-size: 18px;
+		border: 1px solid lightslategray;
+	}
+}
+
+.bookings-dates, .bookings-num-guests {
+	width: 30vw;
+	height: 8vh;
+}
+
+.bookings-submit {
+	width: 8vw;
+	height: 8vh;
+	background-color: #C74F2D;
+	text-align: center;
+	color: white;
+}
+
+.bookings-submit:hover {
+	background-color: #81311b;
+}
+
+/* show map */
 .show-map {
 	height: 60vh;
 	width: 76vw;
 	background-color: aquamarine;
+	border-radius: 16px;
 }
 
+.map-head {
+	font-size: 40px;
+}
+
+/* show review */
 .show-reviews {
-	height: 30vh;
+	height: 60vh;
 	width: 76vw;
+	border-radius: 16px;
+	background-color: aliceblue;
+}
+
+.reviews-head {
+	font-size: 40px;
 }

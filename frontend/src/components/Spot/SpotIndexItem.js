@@ -12,6 +12,10 @@ const SpotIndexItem = ({ spot }) => {
 					<img src={photo} className='item-photo'/>
 			
 					<div className='text-container'>
+						<p className='spot-rating'> 
+							<i className="fa-solid fa-thumbs-up" style={{fontSize: '16px'}}></i>
+							<p className='rating'> 100% (42) </p>
+						</p>
 						<Link to={`/spots/${spot.id}`} className='spot-name'>
 							{spot.name}
 						</Link>
