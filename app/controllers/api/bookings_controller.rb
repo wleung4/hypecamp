@@ -20,11 +20,22 @@ class Api::BookingsController < ApplicationController
 	end
 
 	def destroy
-
+		@booking = current_user.bookings.find_by(id: params[:id])
+		if @booking && @booking.delete
+			@user = current_user
+			render :show
+		else
+			render json: @user.errors.full_messages, status: 422
+		end
 	end
 
-	def edit
-
+	def update
+		@booking = current_user.bookings.find_by(id: params[:id])
+		if @booking && @booking.update(booking_params)
+			render :show
+		else
+			render json: @user.errors.full_messages, status: 422
+		end
 	end
 
 	private
