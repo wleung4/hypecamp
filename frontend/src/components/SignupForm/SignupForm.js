@@ -63,16 +63,16 @@ const SignupForm = ({ onClose }) => {
 			<div className='signup-terms'>
 				By continuing, you agree to Hypecamp's Terms of Use and Privacy Policy.
 			</div>
-			<label>
+			<label className='label'>
 				<input type='text' value={email} placeholder='Email Address' onChange={e => setEmail(e.target.value)} required/>
 			</label>
-			<label>
+			<label className='label'>
 				<input type='text' value={username} placeholder='Username' onChange={e => setUsername(e.target.value)} required/>
 			</label>
-			<label>
+			<label className='label'>
 				<input type='password' value={password} placeholder='Password' onChange={e => setPassword(e.target.value)} required/>
 			</label>
-			<label>
+			<label className='label'>
 				<input type='password' value={confirmPassword} placeholder='Confirm Password' onChange={e => setConfirmPassword(e.target.value)} required/>
 			</label>
 			<div className='button-div'>

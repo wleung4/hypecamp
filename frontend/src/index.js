@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import './reset.css';
@@ -33,11 +33,13 @@ function Root() {
 }
 
 const renderApplication = () => {
-	const root = ReactDOM.createRoot(document.getElementById('root'));
-	root.render(
+	// const root = ReactDOM.createRoot(document.getElementById('root'));
+	const root = document.getElementById('root')
+	ReactDOM.render(
 		<React.StrictMode>
 		  <Root />
 		</React.StrictMode>,
+		root
 	);
 }
 

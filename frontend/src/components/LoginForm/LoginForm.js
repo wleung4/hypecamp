@@ -58,10 +58,10 @@ const LoginForm = ({ onClose }) => {
 			<div className='login-terms'>
 				By continuing, you agree to Hypecamp's terms of use and privacy policy.
 			</div>
-			<label>
+			<label className='label'>
 				<input type="text" value={email} placeholder='Email Address' onChange={e => setEmail(e.target.value)} required/>
 			</label>
-			<label>
+			<label className='label'>
 				<input type="password" placeholder='Password' value={password} onChange={e => setPassword(e.target.value)} required/>
 			</label>
 			<div className='button-div'>

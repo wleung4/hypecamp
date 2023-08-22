@@ -4,11 +4,13 @@ import logger from 'redux-logger';
 import sessionReducer from './sessionReducer';
 import uiReducer from './uiReducer';
 import spotReducer from './spotReducer';
+import bookingReducer from './bookingReducer';
 
 const rootReducer = combineReducers({
 	session: sessionReducer,
 	// ui: uiReducer,
-	spots: spotReducer
+	spots: spotReducer,
+	bookings: bookingReducer
 })
 
 let enhancer;

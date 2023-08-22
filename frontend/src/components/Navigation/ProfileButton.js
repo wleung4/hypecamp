@@ -36,10 +36,10 @@ const ProfileButton = ({ user }) => {
 			{showMenu && (
 				<ul className="profile-dropdown">
 					<div className="dropdown-div">
-						<li>Account</li>
+						<li className="li">Account</li>
 						{/* <li>{user.username}</li> */}
-						<li>Bookings</li>
-						<li onClick={logout}>Log out</li>
+						<li className="li">Bookings</li>
+						<li className="li" onClick={logout}>Log out</li>
 					</div>
 				</ul>
 			)}

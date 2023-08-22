@@ -3,7 +3,7 @@
 	padding-top: 4px;
 }
 
-li {
+.li {
 
 	position: relative;
 	background-color: inherit;
@@ -15,7 +15,7 @@ li {
 	text-decoration: underline;
 }
 
-li:hover {
+.li:hover {
 	cursor: pointer;
 }
 

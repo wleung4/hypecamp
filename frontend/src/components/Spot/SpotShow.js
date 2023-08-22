@@ -1,20 +1,39 @@
+import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import './Spot.css';
 import { useParams } from 'react-router-dom';
 import { fetchSpot, getSpot } from '../../store/spotReducer';
 import { useEffect } from 'react';
 import Navigation from '../Navigation/Navigation';
+import BookingDayPicker from '../Booking/BookingDayPicker';
 
 const SpotShow = () => {
 	const dispatch = useDispatch();
 	const { spotId } = useParams();
 	const spot = useSelector(getSpot(spotId));
 	const photo = 'https://hypecamp-seeds.s3.us-west-1.amazonaws.com/cabin.jpg';
+	const [startDate, setStartDate] = useState(null);
+	const [endDate, setEndDate] = useState(null);
+	const [calender, setCalender] = useState(false);
 
 	useEffect(() => {
 		dispatch(fetchSpot(spotId));
 	}, [spotId])
 
+	const onDatesChange = (startDate, endDate) => {
+		console.log(startDate)
+		console.log(endDate)
+		setStartDate(startDate);
+		setEndDate(endDate);
+	}
+
+	const calenderOutsideClick = () => {
+		setCalender(false)
+	}
+
+	const formatDate = date => {
+		return date.format('MMMM DD');
+	}
 	return (
 		<>
 			<Navigation />
@@ -52,9 +71,18 @@ const SpotShow = () => {
 				<div className='bookings'>
 					<p className='text'>Book this Spot</p>
 					<div className='bookings-data'>
-						<button className='bookings-dates' >
-							Add dates
-							{/* <input type='date'/> */}
+						<button className='bookings-dates' onClick={() => setCalender(!calender)}>
+							{startDate && endDate ? `Start Date: ${formatDate(startDate)} | End Date: ${formatDate(endDate)}`: 'Add dates'}
+							{calender && (
+								<div className='calender'>
+									<BookingDayPicker 
+										startDate={startDate}
+										endDate={endDate}
+										onDatesChange={onDatesChange}
+										onOutsideClick={calenderOutsideClick}
+									/>
+								</div>
+							)}
 						</button>
 						<button className='bookings-num-guests'>
 							Add guests
@@ -63,6 +91,7 @@ const SpotShow = () => {
 							Book now
 						</button>
 					</div>
+						
 				</div>
 
 				<div className='show-map'>

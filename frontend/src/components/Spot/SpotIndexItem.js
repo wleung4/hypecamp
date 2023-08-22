@@ -14,7 +14,7 @@ const SpotIndexItem = ({ spot }) => {
 					<div className='text-container'>
 						<p className='spot-rating'> 
 							<i className="fa-solid fa-thumbs-up" style={{fontSize: '16px'}}></i>
-							<p className='rating'> 100% (42) </p>
+							<sub className='rating'> 100% (42) </sub>
 						</p>
 						<Link to={`/spots/${spot.id}`} className='spot-name'>
 							{spot.name}

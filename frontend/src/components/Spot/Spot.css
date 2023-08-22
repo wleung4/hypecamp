@@ -221,6 +221,7 @@
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	flex-wrap: wrap;
 	height: 100%;
 	width: 100%;
 
@@ -239,6 +240,9 @@
 	height: 8vh;
 }
 
+.bookings-dates {
+	position: relative;
+}
 .bookings-submit {
 	width: 8vw;
 	height: 8vh;
@@ -250,6 +254,18 @@
 .bookings-submit:hover {
 	background-color: #81311b;
 }
+
+.calender {
+	position: absolute;
+	top: 120%;
+	left: 0%;
+	padding: 12px 12px;
+	border: 0.5px solid lightgray;
+	border-radius: 16px;
+	background-color: white;
+	box-shadow: 0 0 0 0.1px lightgray;
+}
+
 
 /* show map */
 .show-map {
