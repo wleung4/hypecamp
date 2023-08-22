@@ -1,0 +1,23 @@
+.calender {
+	position: absolute;
+	top: 120%;
+	left: 0%;
+	padding: 12px 12px;
+	border: 0.5px solid lightgray;
+	border-radius: 16px;
+	background-color: white;
+	box-shadow: 0 0 0 0.1px lightgray;
+}
+
+.clear-button {
+	font-size: 18px;
+	font-weight: 700;
+	background-color: white;
+	border: none;
+	margin-top: 4px;
+	padding: 6px 10px;
+}
+
+.clear-button:hover {
+	cursor: pointer;
+}

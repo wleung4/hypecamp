@@ -72,22 +72,23 @@ const SpotShow = () => {
 					<p className='text'>Book this Spot</p>
 					<div className='bookings-data'>
 						<button className='bookings-dates' onClick={() => setCalender(!calender)}>
+							<i class="fa-solid fa-calendar"></i>
 							{startDate && endDate ? `Start Date: ${formatDate(startDate)} | End Date: ${formatDate(endDate)}`: 'Add dates'}
 							{calender && (
-								<div className='calender'>
-									<BookingDayPicker 
-										startDate={startDate}
-										endDate={endDate}
-										onDatesChange={onDatesChange}
-										onOutsideClick={calenderOutsideClick}
-									/>
-								</div>
+								<BookingDayPicker 
+									startDate={startDate}
+									endDate={endDate}
+									onDatesChange={onDatesChange}
+									onOutsideClick={calenderOutsideClick}
+								/>
 							)}
 						</button>
 						<button className='bookings-num-guests'>
+							<i class="fa-solid fa-user"></i>
 							Add guests
 						</button>
 						<button className='bookings-submit'>
+							<i class="fa-solid fa-magnifying-glass" style={{color: '#ffffff'}}></i>
 							Book now
 						</button>
 					</div>
