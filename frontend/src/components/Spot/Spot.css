@@ -242,6 +242,11 @@
 
 .bookings-dates, .bookings-num-guests {
 	position: relative;
+	display: flex;
+	align-items: center;
+	> * {
+		padding: 10px 10px;
+	}
 }
 
 .bookings-submit {

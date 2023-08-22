@@ -45,6 +45,10 @@
 	border: 0.25px solid black;
 }
 
+.add-button:hover, .sub-button:hover {
+	cursor: pointer;
+}
+
 .horizontal-line {
 	border: 1px solid lightgray;
 	width: 99%;

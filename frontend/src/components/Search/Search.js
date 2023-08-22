@@ -9,7 +9,9 @@ const Search = () => {
 	const [endDate, setEndDate] = useState(null);
 	const [calendar, setCalendar] = useState(false);
 	const [guestAdder, setGuestAdder] = useState(false);
-	
+	const [adultCounter, setAdultCounter] = useState(1);
+	const [childrenCounter, setChildrenCounter] = useState(0);
+
 	const onDatesChange = (startDate, endDate) => {
 		console.log(startDate)
 		console.log(endDate)
@@ -22,7 +24,22 @@ const Search = () => {
 	}
 
 	const formatDate = date => {
-		return date.format('MMMM DD');
+		return date.format('MMM DD');
+	}
+
+	const onGuestChange = (adults, children) => {
+		setAdultCounter(adults);
+		setChildrenCounter(children);
+	}
+
+	const handleDates = () => {
+		setCalendar(!calendar);
+		if(guestAdder) setGuestAdder(!guestAdder);
+	}
+
+	const handleGuests = () => {
+		setGuestAdder(!guestAdder);
+		if(calendar) setCalendar(!calendar);
 	}
 
 	return (
@@ -30,25 +47,29 @@ const Search = () => {
 			<div className="search-background">
 				<div className='search-bar'>
 					<input className="search" placeholder="Search destinations"/>
-					<button className='search-dates' onClick={() => setCalendar(!calendar)}>
-					<i className="fa-solid fa-calendar"></i>
-					{startDate && endDate ? `Start: ${formatDate(startDate)} | End: ${formatDate(endDate)}`: 'Add dates'}
-						{calendar && (
-							<BookingDayPicker 
-								startDate={startDate}
-								endDate={endDate}
-								onDatesChange={onDatesChange}
-								onOutsideClick={calendarOutsideClick}
-							/>
-						)}
-					</button>
-					<button className='search-guests' onClick={()=> setGuestAdder(!guestAdder)}> 
-						Add guests 
+					<div className='search-dates' onClick={handleDates}>
+						<i className="fa-solid fa-calendar"></i>
+						<p>{startDate && endDate ? `Start: ${formatDate(startDate)} | 
+							End: ${formatDate(endDate)}`: 'Add dates'}</p>
+							{calendar && (
+								<BookingDayPicker 
+									startDate={startDate}
+									endDate={endDate}
+									onDatesChange={onDatesChange}
+									onOutsideClick={calendarOutsideClick}
+								/>
+							)}
+					</div>
+					<div className='search-guests' onClick={handleGuests}> 
+						<i className="fa-solid fa-user" ></i>
+						<p>{adultCounter + childrenCounter} guests </p>
 						{guestAdder && (
-							<GuestAdder />
+							<GuestAdder onGuestChange={onGuestChange}/>
 						)}
-					</button>
-					<NavLink to='/spots' className='search-button'>Search
+					</div>
+					<NavLink to='/spots' className='search-button'>
+						<i className="fa-solid fa-magnifying-glass" style={{color: '#ffffff'}}></i>
+						<p>Search</p>
 					</NavLink>
 				</div>
 			</div>

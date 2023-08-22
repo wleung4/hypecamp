@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './GuestAdder.css';
 
-const GuestAdder = () => {
+const GuestAdder = ({ onGuestChange }) => {
+	const [adultCounter, setAdultCounter] = useState(1);
+	const [childrenCounter, setChildrenCounter] = useState(0);
 
+	useEffect(() => {
+		console.log('adult:', adultCounter)
+		console.log('child:', childrenCounter)
+		onGuestChange(adultCounter, childrenCounter)
+	}, [adultCounter, childrenCounter])
+
+	const handlePropagation = (e) => {
+		e.stopPropagation();
+	}
 	return (
-		<div className='guest-adder'>
+		<div className='guest-adder' onClick={handlePropagation}>
 			<div className='add-adult'>
 				<div>
 					Adult <br />
@@ -12,11 +23,11 @@ const GuestAdder = () => {
 				</div>
 
 				<div className='add-sub-buttons'>
-					<button className='add-button'>
+					<button className='sub-button' onClick={() => adultCounter > 1 ? setAdultCounter(adultCounter - 1) : null}>
 						-
 					</button>
-					<p> 0 </p>
-					<button className='sub-button'>
+					<p> {adultCounter} </p>
+					<button className='add-button' onClick={() => setAdultCounter(adultCounter + 1)}>
 						+
 					</button>
 				</div>
@@ -29,11 +40,11 @@ const GuestAdder = () => {
 				</div>
 
 				<div className='add-sub-buttons'>
-					<button className='add-button'>
+					<button className='sub-button' onClick={() => childrenCounter > 0 ? setChildrenCounter(childrenCounter - 1) : null}>
 						-
 					</button>
-					<p> 0 </p>
-					<button className='sub-button'>
+					<p> {childrenCounter} </p>
+					<button className='add-button' onClick={() => setChildrenCounter(childrenCounter + 1)}>
 						+
 					</button>
 				</div>

@@ -27,6 +27,10 @@
 .splash-text-sub {
 	font-size: 28px;
 	font-weight: 600;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .search-div {

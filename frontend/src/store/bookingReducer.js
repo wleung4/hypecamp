@@ -41,7 +41,8 @@ export const createBooking = booking => async dispatch => {
 		method: 'POST',
 		body: JSON.stringify(booking),
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'X-CSRF-Token': sessionStorage.getItem('X-CSRF-Token')
 		}
 	})
 	

@@ -1,4 +1,5 @@
 class Api::BookingsController < ApplicationController
+	before_action :snake_case_params, :attach_authenticity_token
 
 	def index
 		@bookings = Booking.all
@@ -11,10 +12,12 @@ class Api::BookingsController < ApplicationController
 	end
 
 	def create
+		# puts booking_params
 		@booking = Booking.new(booking_params)
 		if @booking.save
 			render :show
 		else
+			puts @booking.errors.full_messages
 			render json: @booking.errors.full_messages, status: 422
 		end
 	end

@@ -11,11 +11,13 @@ require 'open-uri'
 	puts "Destroying tables..."
 	User.destroy_all
 	Spot.destroy_all
+	Booking.destroy_all
 
 	puts "Resetting primary keys..."
 	ApplicationRecord.connection.reset_pk_sequence!('users')
 	ApplicationRecord.connection.reset_pk_sequence!('spots')
-  
+	ApplicationRecord.connection.reset_pk_sequence!('bookings')
+	
 	puts "Creating users..."
 
 	User.create!(

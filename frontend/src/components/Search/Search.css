@@ -30,6 +30,12 @@
 	border-radius: 12px;
 	background-color: white;
 	text-align: left;
+	/* align-items: center; */
+	display: flex;
+	align-items: center;
+	> * {
+		padding: 10px 10px;
+	}
 }
 
 .search-guests {
@@ -40,8 +46,16 @@
 	background-color: white;
 	text-align: left;
 	position: relative;
+	display: flex;
+	align-items: center;
+	> * {
+		padding: 10px 10px;
+	}
 }
 
+.icon {
+	padding: 10px 10px;
+}
 .search-button {
 	width: 8vw;
 	height: 60px;
@@ -53,6 +67,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	> * {
+		padding: 10px 4px;
+	}
 }
 .search-button:hover {
 	background-color: #81311b;

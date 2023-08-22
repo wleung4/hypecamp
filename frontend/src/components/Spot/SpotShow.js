@@ -7,6 +7,9 @@ import { useEffect } from 'react';
 import Navigation from '../Navigation/Navigation';
 import BookingDayPicker from '../Booking/BookingDayPicker';
 import GuestAdder from "../Booking/GuestAdder";
+import { createBooking } from "../../store/bookingReducer";
+import { Modal } from "../../context/Modal";
+import LoginForm from "../LoginForm/LoginForm";
 
 const SpotShow = () => {
 	const dispatch = useDispatch();
@@ -17,14 +20,16 @@ const SpotShow = () => {
 	const [endDate, setEndDate] = useState(null);
 	const [calendar, setCalendar] = useState(false);
 	const [guestAdder, setGuestAdder] = useState(false);
+	const [adultCounter, setAdultCounter] = useState(1);
+	const [childrenCounter, setChildrenCounter] = useState(0);
+	const user = useSelector(state => state.session.user);
+	const [loginModal, setLoginModal] = useState(false);
 
 	useEffect(() => {
 		dispatch(fetchSpot(spotId));
 	}, [spotId])
 
 	const onDatesChange = (startDate, endDate) => {
-		console.log(startDate)
-		console.log(endDate)
 		setStartDate(startDate);
 		setEndDate(endDate);
 	}
@@ -34,11 +39,54 @@ const SpotShow = () => {
 	}
 
 	const formatDate = date => {
-		return date.format('MMMM DD');
+		return date.format('MMM DD');
 	}
+
+	const onGuestChange = (adults, children) => {
+		setAdultCounter(adults);
+		setChildrenCounter(children);
+	}
+
+	const handleOnClose = () => {
+		setLoginModal(false)
+	}
+
+	const handleDates = () => {
+		setCalendar(!calendar);
+		if(guestAdder) setGuestAdder(!guestAdder);
+	}
+
+	const handleGuests = () => {
+		setGuestAdder(!guestAdder);
+		if(calendar) setCalendar(!calendar);
+	}
+
+	const handleSubmit = e => {
+		e.preventDefault();
+		if((startDate || endDate) === null) return;
+		const totalGuests = adultCounter + childrenCounter;
+		const start = startDate.format('YYYY-MM-DD');
+		const end = endDate.format('YYYY-MM-DD');
+		const days = endDate.diff(startDate, 'days') + 1;
+		const totalPrice = days * spot.price;
+		console.log(days);
+		if(user) {
+			dispatch(createBooking({ spot_id: spot.id, user_id: user.id, num_guests: totalGuests, 
+				price: totalPrice, start_date: start, end_date: end }))
+		} else {
+			setLoginModal(true);
+		}
+
+	}
+
 	return (
 		<>
 			<Navigation />
+			{loginModal && !user && (
+				<Modal onClose={handleOnClose}>
+					<LoginForm onClose={handleOnClose}/>
+				</Modal>
+			)}
 			<div className='show-page'>
 				<div className='header-info'>
 					<h2 className='show-header'>{spot?.name}</h2>
@@ -73,9 +121,10 @@ const SpotShow = () => {
 				<div className='bookings'>
 					<p className='text'>Book this Spot</p>
 					<div className='bookings-data'>
-						<button className='bookings-dates' onClick={() => setCalendar(!calendar)}>
-							<i class="fa-solid fa-calendar"></i>
-							{startDate && endDate ? `Start Date: ${formatDate(startDate)} | End Date: ${formatDate(endDate)}`: 'Add dates'}
+						<div className='bookings-dates' onClick={handleDates}>
+							<i className="fa-solid fa-calendar"></i>
+							<p>{startDate && endDate ? `Start Date: ${formatDate(startDate)} | 
+								End Date: ${formatDate(endDate)}`: 'Add dates'} </p>
 							{calendar && (
 								<BookingDayPicker 
 									startDate={startDate}
@@ -84,21 +133,20 @@ const SpotShow = () => {
 									onOutsideClick={calendarOutsideClick}
 								/>
 							)}
-						</button>
-						<button className='bookings-num-guests' onClick={() => setGuestAdder(!guestAdder)}>
-							<i class="fa-solid fa-user"></i>
-							Add guests
+						</div>
+						<div className='bookings-num-guests' onClick={handleGuests}>
+							<i className="fa-solid fa-user"></i>
+							<p>{adultCounter + childrenCounter} guests</p>
 							{guestAdder && (
-								<GuestAdder />
+								<GuestAdder onGuestChange={onGuestChange}/>
 							)}
 							
-						</button>
-						<button className='bookings-submit'>
-							<i class="fa-solid fa-magnifying-glass" style={{color: '#ffffff'}}></i>
+						</div>
+						<button className='bookings-submit' onClick={handleSubmit}>
 							Book now
 						</button>
 					</div>
-						
+					
 				</div>
 
 				<div className='show-map'>

@@ -14,7 +14,8 @@ const Splash = () => {
 						Find yourself outside.
 					</h1>
 					<h2 className='splash-text-sub'>
-						Book beautiful and relaxing spots <br /> campsites—only on Hypecamp.
+						<p>Book beautiful and relaxing camping</p>
+						<p>spots—only on Hypecamp.</p>
 					</h2>
 				</div>
 								
