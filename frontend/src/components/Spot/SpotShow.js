@@ -6,6 +6,7 @@ import { fetchSpot, getSpot } from '../../store/spotReducer';
 import { useEffect } from 'react';
 import Navigation from '../Navigation/Navigation';
 import BookingDayPicker from '../Booking/BookingDayPicker';
+import GuestAdder from "../Booking/GuestAdder";
 
 const SpotShow = () => {
 	const dispatch = useDispatch();
@@ -14,7 +15,8 @@ const SpotShow = () => {
 	const photo = 'https://hypecamp-seeds.s3.us-west-1.amazonaws.com/cabin.jpg';
 	const [startDate, setStartDate] = useState(null);
 	const [endDate, setEndDate] = useState(null);
-	const [calender, setCalender] = useState(false);
+	const [calendar, setCalendar] = useState(false);
+	const [guestAdder, setGuestAdder] = useState(false);
 
 	useEffect(() => {
 		dispatch(fetchSpot(spotId));
@@ -27,8 +29,8 @@ const SpotShow = () => {
 		setEndDate(endDate);
 	}
 
-	const calenderOutsideClick = () => {
-		setCalender(false)
+	const calendarOutsideClick = () => {
+		setCalendar(false)
 	}
 
 	const formatDate = date => {
@@ -71,21 +73,25 @@ const SpotShow = () => {
 				<div className='bookings'>
 					<p className='text'>Book this Spot</p>
 					<div className='bookings-data'>
-						<button className='bookings-dates' onClick={() => setCalender(!calender)}>
+						<button className='bookings-dates' onClick={() => setCalendar(!calendar)}>
 							<i class="fa-solid fa-calendar"></i>
 							{startDate && endDate ? `Start Date: ${formatDate(startDate)} | End Date: ${formatDate(endDate)}`: 'Add dates'}
-							{calender && (
+							{calendar && (
 								<BookingDayPicker 
 									startDate={startDate}
 									endDate={endDate}
 									onDatesChange={onDatesChange}
-									onOutsideClick={calenderOutsideClick}
+									onOutsideClick={calendarOutsideClick}
 								/>
 							)}
 						</button>
-						<button className='bookings-num-guests'>
+						<button className='bookings-num-guests' onClick={() => setGuestAdder(!guestAdder)}>
 							<i class="fa-solid fa-user"></i>
 							Add guests
+							{guestAdder && (
+								<GuestAdder />
+							)}
+							
 						</button>
 						<button className='bookings-submit'>
 							<i class="fa-solid fa-magnifying-glass" style={{color: '#ffffff'}}></i>

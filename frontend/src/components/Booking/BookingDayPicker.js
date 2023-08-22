@@ -13,7 +13,7 @@ const BookingDayPicker = ({ startDate, endDate, onDatesChange, calenderOutsideCl
 	}
 
 	return (
-		<div className='calender'>
+		<div className='calendar'>
 			<DayPickerRangeController
 				startDate={startDate} 
 				endDate={endDate}

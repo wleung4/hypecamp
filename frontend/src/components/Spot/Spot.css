@@ -240,9 +240,10 @@
 	height: 8vh;
 }
 
-.bookings-dates {
+.bookings-dates, .bookings-num-guests {
 	position: relative;
 }
+
 .bookings-submit {
 	width: 8vw;
 	height: 8vh;

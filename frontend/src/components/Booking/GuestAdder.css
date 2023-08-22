@@ -1,0 +1,51 @@
+.guest-adder {
+	position: absolute;
+	top: 120%;
+	left: 0%;
+	padding: 12px 12px;
+	border: 0.5px solid lightgray;
+	border-radius: 16px;
+	background-color: white;
+	box-shadow: 0 0 0 0.5px lightgray;
+	height: 20vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+}
+
+
+
+.add-adult, .add-children {
+	height: 8vh;
+}
+
+.add-adult, .add-children {
+	/* border-bottom: 1px solid black; */
+	display: flex;
+	justify-content: space-between;
+	/* border: 1px solid black; */
+	align-items: center;
+}
+
+.add-sub-buttons {
+	display: flex;
+	justify-content: space-between;
+	height: inherit;
+	width: 6vw;
+	align-items: center;
+}
+
+.add-button, .sub-button {
+	border-radius: 50%;
+	font-size: 18px;
+	background-color: white;
+	height: 30px;
+	width: 30px;
+	border: 0.25px solid black;
+}
+
+.horizontal-line {
+	border: 1px solid lightgray;
+	width: 99%;
+}

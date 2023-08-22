@@ -10,8 +10,8 @@
 
 .search-bar {
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .search {
@@ -23,8 +23,9 @@
 }
 
 .search-dates {
+	position: relative;
 	width: 20vw;
-	height: 60px;
+	height: 8vh;
 	border: 1px solid lightgray;
 	border-radius: 12px;
 	background-color: white;
