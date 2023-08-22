@@ -2,12 +2,14 @@ import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 import BookingDayPicker from '../Booking/BookingDayPicker';
 import './Search.css';
 import { useState } from 'react';
+import GuestAdder from '../Booking/GuestAdder';
 
 const Search = () => {
 	const [startDate, setStartDate] = useState(null);
 	const [endDate, setEndDate] = useState(null);
 	const [calendar, setCalendar] = useState(false);
-
+	const [guestAdder, setGuestAdder] = useState(false);
+	
 	const onDatesChange = (startDate, endDate) => {
 		console.log(startDate)
 		console.log(endDate)
@@ -40,7 +42,12 @@ const Search = () => {
 							/>
 						)}
 					</button>
-					<button className='search-guests'> Add guests </button>
+					<button className='search-guests' onClick={()=> setGuestAdder(!guestAdder)}> 
+						Add guests 
+						{guestAdder && (
+							<GuestAdder />
+						)}
+					</button>
 					<NavLink to='/spots' className='search-button'>Search
 					</NavLink>
 				</div>
