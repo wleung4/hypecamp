@@ -63,7 +63,7 @@ const SpotShow = () => {
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		if((startDate || endDate) === null) return;
+		if(!startDate || !endDate) return;
 		const totalGuests = adultCounter + childrenCounter;
 		const start = startDate.format('YYYY-MM-DD');
 		const end = endDate.format('YYYY-MM-DD');
@@ -81,7 +81,7 @@ const SpotShow = () => {
 
 	return (
 		<>
-			<Navigation />
+			{/* <Navigation /> */}
 			{loginModal && !user && (
 				<Modal onClose={handleOnClose}>
 					<LoginForm onClose={handleOnClose}/>

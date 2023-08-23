@@ -8,7 +8,7 @@ const Splash = () => {
 	return (
 		<>	
 			<div className='background'>
-				<Navigation />
+				{/* <Navigation /> */}
 				<div className='splash-text-div'>
 					<h1 className='splash-text-header'>
 						Find yourself outside.

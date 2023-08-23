@@ -1,0 +1,43 @@
+/* user booking */
+.user-bookings-page {
+	padding-top: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #F3F2EF;
+	> * {
+		padding: 10px 10px;
+		margin-bottom: 2vh;
+	}
+}
+
+/* user booking item */
+.user-bookings-item {
+	border: 1px solid lightgray;
+	box-shadow: 0 0 0 1px lightgray;
+	width: 40vw;
+	height: 36vw;
+	background-color: aquamarine;
+	border-radius: 16px;
+	background-color: white;
+}
+
+.bookings-header {
+	font-size: 40px;
+}
+
+.booking-div {
+	width: 100%;
+	height: 50%;
+}
+
+.booking-item-photo {
+	height: 100%;
+	width: 100%;
+}
+
+.booking-div-text {
+	font-size: 20px;
+	color: darkslategray;
+}

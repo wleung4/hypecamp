@@ -18,6 +18,10 @@ const removeBooking = bookingId => ({
 	bookingId
 })
 
+export const getBookings = state => state.bookings ? state.bookings : null;
+
+export const getBooking = bookingId => state => state.bookings ? state.bookings[bookingId] : null;
+
 export const fetchBooking = bookingId => async dispatch => {
 	const res = await fetch(`/api/bookings/${bookingId}`);
 

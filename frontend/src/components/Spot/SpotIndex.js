@@ -17,12 +17,12 @@ const SpotIndex = () => {
 		const allSpots = Object.values(spots).map(spot => {
 			return <SpotIndexItem key={spot.id} spot={spot}/>
 		})
-		return allSpots
+		return allSpots;
 	}
 
 	return (
 		<>
-			<Navigation />
+			{/* <Navigation /> */}
 			<div className='spots-index-page'>
 				<div className='spots-index'>
 					{handleSpots()}
