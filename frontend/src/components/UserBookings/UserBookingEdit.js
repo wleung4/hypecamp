@@ -59,7 +59,8 @@ const UserBookingEdit = ({ booking, spot }) => {
 	// const formatInputDates = date => {
 	// 	return Moment(date).format('YYYY-MM-DD')
 	// }
-	const handleConfirm = () => {
+	const handleConfirm = (e) => {
+		e.stopPropagation()
 		if(startDate && endDate) {
 			dispatch(updateBooking( { id: booking.id, spot_id: booking.spotId, user_id: user.id, num_guests: adultCounter + childrenCounter, 
 				price: getTotal(), start_date: startDate.format('YYYY-MM-DD'), end_date: endDate.format('YYYY-MM-DD')}));

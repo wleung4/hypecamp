@@ -162,8 +162,8 @@ const SpotShow = () => {
 
 				<hr className='show-horizontal-line'/>
 
+				<h2 className='map-head'>Location</h2>
 				<div className='show-map'>
-					<h2 className='map-head'>Map</h2>
 				</div>
 
 				<hr className='show-horizontal-line'/>

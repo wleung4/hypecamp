@@ -1,7 +1,7 @@
 {
   "name": "hypecamp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Find campsites available for booking around you!",
   "main": "index.js",
   "directories": {
     "lib": "lib"
