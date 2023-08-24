@@ -1,15 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import './Spot.css';
 import { useParams } from 'react-router-dom';
 import { fetchSpot, getSpot } from '../../store/spotReducer';
-import { useEffect } from 'react';
-import Navigation from '../Navigation/Navigation';
 import BookingDayPicker from '../Booking/BookingDayPicker';
 import GuestAdder from "../Booking/GuestAdder";
 import { createBooking } from "../../store/bookingReducer";
 import { Modal } from "../../context/Modal";
 import LoginForm from "../LoginForm/LoginForm";
+import { Redirect } from "react-router-dom";
 
 const SpotShow = () => {
 	const dispatch = useDispatch();
@@ -24,6 +23,7 @@ const SpotShow = () => {
 	const [childrenCounter, setChildrenCounter] = useState(0);
 	const user = useSelector(state => state.session.user);
 	const [loginModal, setLoginModal] = useState(false);
+	const [redirect, setRedirect] = useState(false);
 
 	useEffect(() => {
 		dispatch(fetchSpot(spotId));
@@ -73,6 +73,7 @@ const SpotShow = () => {
 		if(user) {
 			dispatch(createBooking({ spot_id: spot.id, user_id: user.id, num_guests: totalGuests, 
 				price: totalPrice, start_date: start, end_date: end }))
+			setRedirect(true);
 		} else {
 			setLoginModal(true);
 		}
@@ -81,12 +82,8 @@ const SpotShow = () => {
 
 	return (
 		<>
-			{/* <Navigation /> */}
-			{loginModal && !user && (
-				<Modal onClose={handleOnClose}>
-					<LoginForm onClose={handleOnClose}/>
-				</Modal>
-			)}
+			
+			
 			<div className='show-page'>
 				<div className='header-info'>
 					<h2 className='show-header'>{spot?.name}</h2>
@@ -145,6 +142,14 @@ const SpotShow = () => {
 						<button className='bookings-submit' onClick={handleSubmit}>
 							Book now
 						</button>
+						{loginModal && !user && (
+							<Modal onClose={handleOnClose}>
+								<LoginForm onClose={handleOnClose}/>
+							</Modal>
+						)}
+						{redirect && (
+							<Redirect to='/bookings' />
+						)}
 					</div>
 					
 				</div>

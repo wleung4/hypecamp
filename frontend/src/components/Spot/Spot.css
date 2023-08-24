@@ -8,7 +8,7 @@
 
 .spots-index {
 	width: 50vw;
-	background-color: aqua;
+	background-color: white;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
@@ -19,7 +19,7 @@
 	width: 48vw;
 	height: 90vh;
 	background-color: aquamarine;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	position: fixed;
 	right: 0;
 }
@@ -36,20 +36,21 @@
 
 .item-photo {
 	border: 1px solid lightgray;
-	border-radius: 16px;
+	border-radius: 10px;
 	width: 20vw;
 	height: 14vw;
 	/* margin-top: 4px; */
 	margin-bottom: 4px;
-	background-color: white;
+	/* background-color: white; */
+	box-shadow: 0 0 0 1px lightgray;
 }
 
 .spots-index-item {
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	width: 20vw;
 	height: 20vw;
 	padding: 10px 24px;
-	background-color: lightgray;
+	/* background-color: lightgray; */
 }
 
 .text-container *{
@@ -71,7 +72,7 @@
 
 .spot-text {
 	font-size: 18px;
-	color: lightslategray;
+	color: darkslategray;
 }
 
 .price {
@@ -97,7 +98,7 @@
 .header-info {
 	/* border: 1px solid black; */
 	margin-top: 4vh;
-	height: 10vh;
+	height: 8vh;
 	width: 76vw;
 	display: flex;
 	flex-direction: column;

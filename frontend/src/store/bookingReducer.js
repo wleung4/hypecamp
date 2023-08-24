@@ -61,7 +61,8 @@ export const updateBooking = booking => async dispatch => {
 		method: 'PATCH',
 		body: JSON.stringify(booking),
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'X-CSRF-Token': sessionStorage.getItem('X-CSRF-Token')
 		}
 	})
 
@@ -73,7 +74,10 @@ export const updateBooking = booking => async dispatch => {
 
 export const deleteBooking = bookingId => async dispatch => {
 	const res = await fetch(`/api/bookings/${bookingId}`, {
-		method: 'DELETE'
+		method: 'DELETE',
+		headers: {
+			'X-CSRF-Token': sessionStorage.getItem('X-CSRF-Token')
+		}
 	})
 	
 	if(res.ok) {
