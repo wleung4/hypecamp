@@ -24,6 +24,7 @@ const SpotShow = () => {
 	const user = useSelector(state => state.session.user);
 	const [loginModal, setLoginModal] = useState(false);
 	const [redirect, setRedirect] = useState(false);
+	const [error, setError] = useState([]);
 
 	useEffect(() => {
 		dispatch(fetchSpot(spotId));
@@ -63,14 +64,18 @@ const SpotShow = () => {
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		if(!startDate || !endDate) return;
+		setError([]);
+		if(!startDate || !endDate) {
+			setError(['Please select dates before trying again']);
+			return;
+		}
 		const totalGuests = adultCounter + childrenCounter;
 		const start = startDate.format('YYYY-MM-DD');
 		const end = endDate.format('YYYY-MM-DD');
 		const days = endDate.diff(startDate, 'days') + 1;
 		const totalPrice = days * spot.price;
-		console.log(days);
-		if(user) {
+		// console.log(days);
+		if(user && startDate && endDate) {
 			dispatch(createBooking({ spot_id: spot.id, user_id: user.id, num_guests: totalGuests, 
 				price: totalPrice, start_date: start, end_date: end }))
 			setRedirect(true);
@@ -82,8 +87,6 @@ const SpotShow = () => {
 
 	return (
 		<>
-			
-			
 			<div className='show-page'>
 				<div className='header-info'>
 					<h2 className='show-header'>{spot?.name}</h2>
@@ -114,7 +117,9 @@ const SpotShow = () => {
 					<div className='show-activities'>Activities</div>
 					<div className='show-amenities'>Amenities</div>
 				</div>
-				
+
+				<hr className='show-horizontal-line'/>
+
 				<div className='bookings'>
 					<p className='text'>Book this Spot</p>
 					<div className='bookings-data'>
@@ -147,16 +152,21 @@ const SpotShow = () => {
 								<LoginForm onClose={handleOnClose}/>
 							</Modal>
 						)}
+						
 						{redirect && (
 							<Redirect to='/bookings' />
 						)}
 					</div>
-					
+				<p className='booking-dates-error'>{error}</p>
 				</div>
+
+				<hr className='show-horizontal-line'/>
 
 				<div className='show-map'>
 					<h2 className='map-head'>Map</h2>
 				</div>
+
+				<hr className='show-horizontal-line'/>
 
 				<div className='show-reviews'>
 					<h2 className='reviews-head'>Reviews</h2>

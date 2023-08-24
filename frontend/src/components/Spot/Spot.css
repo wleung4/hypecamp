@@ -135,12 +135,17 @@
 }
 
 /* show photos */
-.show-description, .show-activities, .show-amenities,
+.show-photos, .bookings
 .show-map, .show-reviews {
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	/* padding: 10px 10px; */
 }
-
+.show-horizontal-line {
+	border: 1px solid lightgray;
+	width: 78%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
 .show-photos {
 	height: 58vh;
 	width: 76vw;
@@ -209,7 +214,7 @@
 .bookings {
 	display: flex;
 	flex-direction: column;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	height: 30vh;
 	width: 76vw;
 }
@@ -262,7 +267,11 @@
 	background-color: #81311b;
 }
 
-
+.booking-dates-error {
+	color: red;
+	font-size: 20px;
+	margin-left: 3%;
+}
 /* show map */
 .show-map {
 	height: 60vh;

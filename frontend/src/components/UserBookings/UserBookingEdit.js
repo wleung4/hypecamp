@@ -44,6 +44,8 @@ const UserBookingEdit = ({ booking, spot }) => {
 	const handleClose = (e) => {
 		e.stopPropagation();
 		setShowEditModal(false);
+		setCalendar(false);
+		setGuestAdder(false);
 	}
 
 	const getTotal = () => {
