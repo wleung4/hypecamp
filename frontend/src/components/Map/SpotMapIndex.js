@@ -9,10 +9,10 @@ const SpotMapIndex = ({ spots, mapOptions } ) => {
 	let google = window.google;
 	let marker = window.marker;
 
-
 	useEffect(() => {
 		if(!map) { 
-			const newMap = new google.maps.Map(mapRef.current, {zoom: 8, center: {lat: 37.64654, lng: -121.39977}, ...mapOptions});
+			const defaultOptions = { zoom: 8, center: {lat: 37.64654, lng: -121.39977}};
+			const newMap = new google.maps.Map(mapRef.current, {...defaultOptions, ...mapOptions});
 			setMap(newMap);
 		}
 	}, [map, spots, mapOptions])

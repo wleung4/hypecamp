@@ -15,7 +15,7 @@ const SpotShow = () => {
 	const dispatch = useDispatch();
 	const { spotId } = useParams();
 	const spot = useSelector(getSpot(spotId));
-	const photo = 'https://hypecamp-seeds.s3.us-west-1.amazonaws.com/cabin.jpg';
+	// const photo = 'https://hypecamp-seeds.s3.us-west-1.amazonaws.com/cabin.jpg';
 	const [calendar, setCalendar] = useState(false);
 	const [startDate, setStartDate] = useState(null);
 	const [endDate, setEndDate] = useState(null);
@@ -102,12 +102,12 @@ const SpotShow = () => {
 				<div className='show-photos'>
 					{/* <div className='big-photo'>
 					</div> */}
-					<img src={photo} alt='' className='main-photo'/>
+					<img src={spot?.photos[0]} alt='' className='main-photo'/>
 					<div className='other-photos'>
-						<img src={photo} alt='' className='secondary-photos'/>
-						<img src={photo} alt='' className='secondary-photos'/>
-						<img src={photo} alt='' className='secondary-photos'/>
-						<img src={photo} alt='' className='secondary-photos'/>
+						<img src={spot?.photos[1]} alt='' className='secondary-photos'/>
+						<img src={spot?.photos[2]} alt='' className='secondary-photos'/>
+						<img src={spot?.photos[3]} alt='' className='secondary-photos'/>
+						<img src={spot?.photos[4]} alt='' className='secondary-photos'/>
 					</div>
 				</div>
 
@@ -165,7 +165,9 @@ const SpotShow = () => {
 
 				<h2 className='map-head'>Location</h2>
 				<div className='show-map'>
-					<SpotMapWrapper spots={{spot}} mapOptions={{center: {lat: spot?.latitude, lng: spot?.longitude}, zoom: 10}}/>
+					{spot && (
+						<SpotMapWrapper spots={{spot}} mapOptions={{center: {lat: spot.latitude, lng: spot.longitude}, zoom: 10}}/>
+					)}
 				</div>
 
 				<hr className='show-horizontal-line'/>

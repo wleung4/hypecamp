@@ -3,7 +3,7 @@
 	background-color: white;
 	padding: 20px 30px;
 	width: 70vw;
-	height: 80px;
+	height: 10vh;
 	border-radius: 16px;
 	box-shadow: 0 0 4px lightgray;
 }
@@ -16,7 +16,7 @@
 
 .search {
 	width: 20vw;
-	height: 60px;
+	height: 8vh;
 	border: 1px solid lightgray;
 	border-radius: 12px;
 	padding-left: 10px;
@@ -40,7 +40,7 @@
 
 .search-guests {
 	width: 16vw;
-	height: 60px;
+	height: 8vh;
 	border: 1px solid lightgray;
 	border-radius: 12px;
 	background-color: white;
