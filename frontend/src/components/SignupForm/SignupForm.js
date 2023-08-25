@@ -15,11 +15,8 @@ const SignupForm = ({ onClose }) => {
 	const [confirmPassword, setConfirmPassword] = useState('');
 	const [errors, setErrors] = useState([]);
 	const [loginModal, setLoginModal] = useState(false);
-	// const display = useSelector(state => state.ui);
 
 	if (sessionUser) return <Redirect to="/" />;
-
-	// const validationErrors = ['Email has already been taken', 'Username has already been taken', 'Confirm password doesnt match password'];
 
 	const handleSubmit = e => {
 		e.preventDefault();
@@ -42,15 +39,6 @@ const SignupForm = ({ onClose }) => {
 				setErrors(['Confirm password doesnt match password']);
 			}
 	}
-
-	// const handleLoginClick = e => {
-	// 	e.stopPropagation();
-	// 	dispatch(deactivateSignupModal());
-	// 	dispatch(activateSessionModal());
-	// 	setLoginModal(true);
-	// }
-
-	// if(!display.signupModal) return null;
 
 	return (
 		<form onSubmit={handleSubmit} className='form'>
@@ -87,13 +75,6 @@ const SignupForm = ({ onClose }) => {
 				)}
 			</div>
 			<ul>
-				{/* {errors.map(error => {
-					// console.log(errors);
-					return <li key={error} className='errors'>{error}</li>}
-				)} */}
-				{/* {errors && validationErrors.includes(errors[0]) && (
-					<li key={errors[0]} className='errors'>{errors[0]}</li>
-				)} */}
 				{errors.length > 0 && (
 					<li key={errors[0]} className='errors'>{errors[0]}</li>
 				)}

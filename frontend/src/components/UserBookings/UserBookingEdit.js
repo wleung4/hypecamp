@@ -56,9 +56,6 @@ const UserBookingEdit = ({ booking, spot }) => {
 		return endDate.diff(startDate, 'days') + 1;
 	}
 
-	// const formatInputDates = date => {
-	// 	return Moment(date).format('YYYY-MM-DD')
-	// }
 	const handleConfirm = (e) => {
 		e.stopPropagation()
 		if(startDate && endDate) {

@@ -22,7 +22,6 @@ const SpotIndex = () => {
 
 	return (
 		<>
-			{/* <Navigation /> */}
 			<div className='spots-index-page'>
 				<div className='spots-index'>
 					{handleSpots()}

@@ -75,7 +75,6 @@ const SpotShow = () => {
 		const end = endDate.format('YYYY-MM-DD');
 		const days = endDate.diff(startDate, 'days') + 1;
 		const totalPrice = days * spot.price;
-		// console.log(days);
 		if(user && startDate && endDate) {
 			dispatch(createBooking({ spot_id: spot.id, user_id: user.id, num_guests: totalGuests, 
 				price: totalPrice, start_date: start, end_date: end }))
@@ -100,8 +99,6 @@ const SpotShow = () => {
 				</div>
 
 				<div className='show-photos'>
-					{/* <div className='big-photo'>
-					</div> */}
 					<img src={spot?.photos[0]} alt='' className='main-photo'/>
 					<div className='other-photos'>
 						<img src={spot?.photos[1]} alt='' className='secondary-photos'/>

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './Spot.css';
 
 const SpotIndexItem = ({ spot }) => {
-	// const photo = 'https://hypecamp-seeds.s3.us-west-1.amazonaws.com/cabin.jpg';
 	return (
 		<>
 			<div className='container'>
