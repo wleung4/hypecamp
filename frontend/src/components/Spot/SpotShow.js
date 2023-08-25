@@ -9,15 +9,16 @@ import { createBooking } from "../../store/bookingReducer";
 import { Modal } from "../../context/Modal";
 import LoginForm from "../LoginForm/LoginForm";
 import { Redirect } from "react-router-dom";
+import SpotMapWrapper from "../Map/SpotMapIndex";
 
 const SpotShow = () => {
 	const dispatch = useDispatch();
 	const { spotId } = useParams();
 	const spot = useSelector(getSpot(spotId));
 	const photo = 'https://hypecamp-seeds.s3.us-west-1.amazonaws.com/cabin.jpg';
+	const [calendar, setCalendar] = useState(false);
 	const [startDate, setStartDate] = useState(null);
 	const [endDate, setEndDate] = useState(null);
-	const [calendar, setCalendar] = useState(false);
 	const [guestAdder, setGuestAdder] = useState(false);
 	const [adultCounter, setAdultCounter] = useState(1);
 	const [childrenCounter, setChildrenCounter] = useState(0);
@@ -164,6 +165,7 @@ const SpotShow = () => {
 
 				<h2 className='map-head'>Location</h2>
 				<div className='show-map'>
+					<SpotMapWrapper spots={{spot}} mapOptions={{center: {lat: spot?.latitude, lng: spot?.longitude}, zoom: 10}}/>
 				</div>
 
 				<hr className='show-horizontal-line'/>

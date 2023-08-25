@@ -8,11 +8,12 @@ import './index.css';
 import Navigation from './components/Navigation/Navigation';
  
 function App() {
+//   const spots = useSelector(state => state.spots)
   return (
 	<>	
 	<div className='background'>
-		<Navigation />
-		<Switch>
+		<Navigation /> 
+		 <Switch>
 			<Route exact path='/bookings' component={UserBookings}/>
 			<Route exact path='/spots/:spotId' component={SpotShow}/>
 			<Route exact path='/spots' component={SpotIndex}/>
@@ -20,7 +21,7 @@ function App() {
 			<Redirect to='/' />
 		</Switch>
 	</div>
-	</>	
+	</>	 
   );
 }
 

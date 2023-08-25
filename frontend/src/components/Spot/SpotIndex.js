@@ -3,7 +3,7 @@ import './Spot.css';
 import { fetchSpots, getSpots } from '../../store/spotReducer';
 import { useEffect } from 'react';
 import SpotIndexItem from './SpotIndexItem';
-import Navigation from '../Navigation/Navigation';
+import SpotMapWrapper from '../Map/SpotMapIndex';
 
 const SpotIndex = () => {
 	const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const SpotIndex = () => {
 				</div>
 
 				<div className='spots-index-map'>
-					
+					<SpotMapWrapper spots={spots} />
 				</div>
 			</div>
 		</>
