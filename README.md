@@ -2,22 +2,26 @@
 
 
 ## What is Hypecamp?
-Hypecamp, a clone of popular camping site Hipcamp, is a site used to book stays at campsites throughout California. User are able to be 
+Hypecamp, a clone of popular camping site Hipcamp, is a site used to book camping spots at throughout California. Users are able to book spots, edit their booking, as well as cancel their booking.
 
-## Live Site
+## [Live Link](https://hypecamp-hbpd.onrender.com/)
 Checkout out Hypecamp [here!](https://hypecamp-hbpd.onrender.com/)
 
 ## Technologies used
-* Ruby on Rails
-* ReactJS, react-redux
-* react-dates, moment.js
-* PostgreSQL
-* AWS S3  
-* Google Maps API
-* HTML
-* CSS
-* npm package manager
+* Ruby on Rails - backend 
+* ReactJS - frontend
+* react-redux - used for managing state
+* react-dates - library used for calendar 
+* moment.js - library used to convert dates
+* PostgreSQL - database used to store backend
+* AWS S3 - image hosting service 
+* Google Maps API - used to create map and its functions
+* HTML - design 
+* CSS - styling
+* npm - used for managing packages
 
 ## Key Features
+
+
 
 ## Code snippets

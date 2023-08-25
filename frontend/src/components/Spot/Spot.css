@@ -277,7 +277,7 @@
 .show-map {
 	height: 60vh;
 	width: 76vw;
-	background-color: aquamarine;
+	/* background-color: aquamarine; */
 	border-radius: 16px;
 }
 
@@ -292,7 +292,7 @@
 	height: 60vh;
 	width: 76vw;
 	border-radius: 16px;
-	background-color: aliceblue;
+	/* background-color: aliceblue; */
 }
 
 .reviews-head {
