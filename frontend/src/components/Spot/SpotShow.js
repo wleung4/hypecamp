@@ -115,8 +115,12 @@ const SpotShow = () => {
 					<p className='show-description'>
 						{spot?.description}
 					</p>
-					<div className='show-activities'>Activities</div>
-					<div className='show-amenities'>Amenities</div>
+					<div className='show-activities'>
+						{/* Activities */}
+					</div>
+					<div className='show-amenities'>
+					{/* Amenities */}
+					</div>
 				</div>
 
 				<hr className='show-horizontal-line'/>
