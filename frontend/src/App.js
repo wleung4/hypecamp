@@ -11,7 +11,6 @@ function App() {
 //   const spots = useSelector(state => state.spots)
   return (
 	<>	
-	<div className='background'>
 		<Navigation /> 
 		 <Switch>
 			<Route exact path='/bookings' component={UserBookings}/>
@@ -20,7 +19,6 @@ function App() {
 			<Route exact path ='/' component={Splash}/>
 			<Redirect to='/' />
 		</Switch>
-	</div>
 	</>	 
   );
 }
