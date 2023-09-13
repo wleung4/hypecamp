@@ -54,12 +54,12 @@
 	justify-content: space-evenly;
 	margin-top: 10rem;
 	height: 60vh;
-	width: 80%;
+	width: 80vw;
 	gap: 1rem;
 }
 
 .splash-images {
-	border: 1px solid black;
+	width: 50%;
 	height: 100%;
-	width: 100%;
+	border-radius: 16px;
 }

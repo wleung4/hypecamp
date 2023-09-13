@@ -30,7 +30,6 @@
 	border-radius: 12px;
 	background-color: white;
 	text-align: left;
-	/* align-items: center; */
 	display: flex;
 	align-items: center;
 	> * {

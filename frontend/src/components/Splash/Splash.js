@@ -2,7 +2,9 @@ import React from 'react';
 import Navigation from '../Navigation/Navigation';
 import Search from '../Search/Search';
 import './Splash.css';
-import splashImage from '../../assets/splash-image.jpg';
+import heroImage from '../../assets/hero-image.jpg';
+import leftImage from '../../assets/splash-image-1.jpg';
+import rightImage from '../../assets/splash-image-2.jpg';
 
 
 const Splash = () => {
@@ -24,17 +26,12 @@ const Splash = () => {
 				</div>
 
 				<div className='hero-image-container'>
-					<img src={splashImage} alt='' className='hero-image' />
+					<img src={heroImage} alt='' className='hero-image' />
 				</div>
 
 				<div className='splash-images-container'>
-					<div className='splash-images'>
-
-					</div>
-
-					<div className='splash-images'>
-
-					</div>
+					<img src={leftImage} alt='' className='splash-images' />
+					<img src={rightImage} alt='' className='splash-images' />
 				</div>
 
 			</div>

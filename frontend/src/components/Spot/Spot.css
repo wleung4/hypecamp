@@ -3,12 +3,11 @@
 .spots-index-page {
 	display: flex;
 	padding-top: 10vh;
-	background-color: #F3F2EF;
 }
 
 .spots-index {
 	width: 50vw;
-	background-color: white;
+	background-color: whitesmoke;
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
@@ -18,8 +17,6 @@
 .spots-index-map {
 	width: 48vw;
 	height: 90vh;
-	background-color: aquamarine;
-	/* border: 1px solid black; */
 	position: fixed;
 	right: 0;
 	height: 90vh;
@@ -40,35 +37,34 @@
 	border-radius: 10px;
 	width: 20vw;
 	height: 14vw;
-	/* margin-top: 4px; */
 	margin-bottom: 4px;
-	/* background-color: white; */
 	box-shadow: 0 0 0 1px lightgray;
+	object-fit: cover;
 }
 
 .spots-index-item {
-	/* border: 1px solid black; */
 	width: 20vw;
 	height: 20vw;
 	padding: 10px 12px;
-	/* background-color: lightgray; */
 }
 
 .text-container *{
 	margin-bottom: 4px;
 }
+
 .spot-rating {
 	display: flex;
 	flex-direction: row;
 }
+
 .rating {
 	font-size: 18px;
 }
+
 .spot-name {
 	font-size: 20px;
 	color: black;
 	text-decoration: none;
-
 }
 
 .spot-text {
@@ -88,7 +84,7 @@
 	justify-content: center;
 	align-items: center;
 	padding-top: 10vh;
-	background-color: white;
+	background-color: whitesmoke;
 
 	> * {
 		margin-bottom: 1vh;
@@ -97,7 +93,6 @@
 
 /* show header */
 .header-info {
-	/* border: 1px solid black; */
 	margin-top: 4vh;
 	height: 8vh;
 	width: 76vw;
@@ -164,9 +159,9 @@
 }
 .main-photo {
 	border-radius: 16px;
-	/* border: 1px solid black; */
 	height: 98%;
-	width: 98%;
+	width: 49%;
+	object-fit: cover;
 }
 
 .other-photos {
@@ -174,18 +169,15 @@
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-items: center;
-	/* border: 1px solid black; */
 	height: 100%;
 	width: 100%;
-
 }
 
 .secondary-photos {
 	height: 46%;
 	width: 46%;
-	/* border: 1px solid black; */
 	border-radius: 16px;
-;
+	object-fit: cover;
 }
 
 /* show description */
@@ -208,14 +200,12 @@
 .show-activities, .show-amenities {
 	width: 20%;
 	height: 90%;
-	/* border: 1px solid black; */
 }
 
 /* show bookings */
 .bookings {
 	display: flex;
 	flex-direction: column;
-	/* border: 1px solid black; */
 	height: 30vh;
 	width: 76vw;
 }
@@ -277,7 +267,6 @@
 .show-map {
 	height: 60vh;
 	width: 76vw;
-	/* background-color: aquamarine; */
 	border-radius: 16px;
 }
 
@@ -292,7 +281,6 @@
 	height: 60vh;
 	width: 76vw;
 	border-radius: 16px;
-	/* background-color: aliceblue; */
 }
 
 .reviews-head {
