@@ -28,13 +28,14 @@ const SpotMapIndex = ({ spots, mapOptions } ) => {
 					marker = new google.maps.Marker({ position: coordinates, map: map, title: spot.name });
 
 					markers.current[spot?.id] = marker;
-					
+
 					marker.addListener('click', () => {
 						if (windowOpened) {
 							infowindow.close();
 						}
 
 						infowindow.setContent(spot?.name);
+						map.panTo(markers.current[spot?.id].getPosition());
 						infowindow.open(map, markers.current[spot?.id]);
 						windowOpened = true;
 					});

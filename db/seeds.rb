@@ -116,7 +116,7 @@ require 'open-uri'
 		zip_code: 95389, 
 		longitude: -119.43048531205818, 
 		latitude: 37.90241769268008, 
-		capacity: 10, 
+		capacity: 8, 
 		price: 100,
 		description: 
 		"Nestled within the captivating embrace of Yosemite's natural wonders, Yosemite Pines Cabin offers a serene and rustic escape that promises to rejuvenate both body and spirit. Tucked away amidst towering trees and rolling meadows, these cozy cabins provide an idyllic retreat for those seeking to immerse themselves in the tranquility of the wilderness. Each cabin is a gateway to a world of outdoor adventure and peaceful seclusion, allowing guests to disconnect from the hustle and bustle of everyday life and reconnect with the beauty of nature.
@@ -160,7 +160,7 @@ require 'open-uri'
 		zip_code: 94129, 
 		longitude: -122.47582193019424, 
 		latitude: 37.79693139547179, 
-		capacity: 32, 
+		capacity: 30, 
 		price: 125,
 		description: "With its 4-acre expanse, Rob Hill Campground offers a limited number of campsites, ensuring an intimate and serene atmosphere. Each site is thoughtfully positioned amidst a grove of eucalyptus and cypress trees, providing a sense of privacy while still being within easy reach of the campground's communal facilities. Rustic charm meets modern convenience, as the campground offers amenities such as picnic tables, fire rings, restrooms, and even a small amphitheater for gatherings and educational programs. As night falls, the distant sounds of the city are replaced by the gentle rustling of leaves, creating an oasis of calm where campers can gather around campfires, share stories, and stargaze against the backdrop of the city lights."
 	)
@@ -181,7 +181,7 @@ require 'open-uri'
 		zip_code: 94965, 
 		longitude: -122.49093006061575, 
 		latitude: 37.82844060703431,
-		capacity: 30, 
+		capacity: 10, 
 		price: 30,
 		description: "Perched on the rugged coastline of the San Francisco Bay, Kirby Cove Campground offers an enchanting retreat that seamlessly marries natural beauty with a sense of seclusion. Accessible by foot or bike, this hidden gem rewards intrepid adventurers with an extraordinary camping experience that feels worlds away from the bustling urban center. The campground's limited accessibility lends an air of exclusivity, allowing campers to truly disconnect from the daily grind and immerse themselves in the tranquil sounds of crashing waves and rustling leaves."
 	)
@@ -202,7 +202,7 @@ require 'open-uri'
 		zip_code: 95369, 
 		longitude: -120.27780240482453, 
 		latitude: 37.6083011523901,
-		capacity: 28, 
+		capacity: 8, 
 		price: 35,
 		description: "The campground provides a variety of camping options, from RV sites with hookups to tent sites nestled among the trees. The soothing sounds of the water and the gentle rustling of leaves create a soothing ambiance that envelops visitors in nature's embrace. Anglers will delight in the abundance of fishing opportunities; the lake is regularly stocked with trout and catfish, ensuring an exciting catch for both beginners and seasoned fishermen. Whether you're casting a line from the shore or setting out on a boat to explore the lake's hidden coves, the fishing experience at Lake McSwain is a major draw for visitors."
 	)
@@ -223,7 +223,7 @@ require 'open-uri'
 		zip_code: 95361, 
 		longitude: -120.86738826669885,
 		latitude: 37.869667842554854,
-		capacity: 48, 
+		capacity: 10, 
 		price: 25,
 		description: "The reservoir's vast expanse allows for various watercraft activities, from serene kayaking and paddleboarding to exhilarating jet skiing and wakeboarding. Anglers will find themselves drawn to the shimmering waters, home to a variety of fish species, including bass, catfish, and crappie. Multiple boat ramps provide easy access to the reservoir, inviting visitors to embark on leisurely cruises or exciting water sports. Sandy beaches line the shore, providing ideal spots for sunbathing, building sandcastles, or sharing a lakeside picnic. The tranquil atmosphere encourages moments of relaxation, whether you're reading a book by the water's edge, taking a leisurely stroll, or simply soaking in the beauty of the surroundings."
 	)
@@ -244,7 +244,7 @@ require 'open-uri'
 		zip_code: 90265, 
 		longitude: -118.99820597551833,
 		latitude: 34.079761575280905,
-		capacity: 76, 
+		capacity: 16, 
 		price: 45,
 		description: "Campers at Sycamore Canyon are treated to a plethora of activities that cater to various interests. Miles of scenic hiking trails wind through coastal sage scrub and chaparral, leading to panoramic vistas that overlook the Pacific Ocean. The Ray Miller Trail is a favorite among hikers, offering breathtaking coastal views and a chance to witness the vibrant wildflower displays that adorn the landscape in the spring. The adjacent beach beckons with its golden sands and crashing waves, inviting sunbathers, surfers, and beachcombers alike to revel in the coastal ambiance."
 	)
@@ -265,7 +265,7 @@ require 'open-uri'
 		zip_code: 95242, 
 		longitude: -121.497915416559,
 		latitude: 38.11054914940152, 
-		capacity: 100, 
+		capacity: 8, 
 		price: 349,
 		description: "Yogi Bear's Jellystone Park Camp is a delightful haven for families seeking a whimsical and entertaining camping experience. Inspired by the beloved cartoon character Yogi Bear, this campground brings the spirit of fun and adventure to life. Nestled in picturesque natural surroundings, Jellystone Park Camp offers a unique blend of outdoor recreation, family-friendly amenities, and themed activities that cater to all ages. The park's cheerful atmosphere, complete with appearances by Yogi Bear and his friends, creates an enchanting setting that ignites the imaginations of children and allows parents to relive their own childhood memories."
 	)
@@ -286,7 +286,7 @@ require 'open-uri'
 		zip_code: 94941, 
 		longitude: -122.596470,
 		latitude: 37.906036, 
-		capacity: 60, 
+		capacity: 10, 
 		price: 29,
 		description: "Mount Tamalpais State Park is a verdant sanctuary located just north of San Francisco in Marin County, California. Towering over the surrounding landscape at an elevation of 2,571 feet, this iconic peak offers an enchanting escape for nature enthusiasts, hikers, and those seeking breathtaking vistas. The park's diverse ecosystems range from dense redwood forests to open grasslands, creating an oasis of biodiversity within close proximity to the bustling Bay Area. The extensive network of trails meandering through the park caters to all levels of outdoor adventurers, making it a popular destination for day trips and weekend getaways."
 	)
@@ -307,7 +307,7 @@ require 'open-uri'
 		zip_code: 94938, 
 		longitude: -122.744676,
 		latitude: 38.032412, 
-		capacity: 60, 
+		capacity: 8, 
 		price: 35,
 		description: "
 		Nestled within the verdant embrace of Marin County, California, Samuel P. Taylor State Park stands as a serene sanctuary of natural beauty and tranquility. This captivating park invites visitors to step into a world of towering redwoods, babbling brooks, and a lush landscape that seems to be straight out of a fairytale. As you stroll along the shaded trails under the towering canopy of ancient trees, the air is filled with the soothing symphony of birdsong and the gentle gurgle of Lagunitas Creek, which winds its way through the heart of the park. The towering redwoods, some of which are over 600 years old, create an awe-inspiring atmosphere that humbles and rejuvenates all who wander among them."
@@ -329,7 +329,7 @@ require 'open-uri'
 		zip_code: 94901, 
 		longitude: -122.494432,
 		latitude: 37.997779, 
-		capacity: 50, 
+		capacity: 6, 
 		price: 47,
 		description: "Whether you're seeking a day of exploration or a weekend getaway, China Camp State Park offers a diverse range of recreational opportunities. Picnic areas provide a perfect setting for gatherings, with views of the bay serving as a backdrop for your meal. Fishing enthusiasts can try their luck in the bay's abundant waters, hoping to catch striped bass, halibut, or even the occasional leopard shark. As the sun dips below the horizon, the park's serene ambiance makes it an ideal location for stargazing, offering an opportunity to connect with the celestial wonders above. With its unique blend of history, natural beauty, and outdoor activities, China Camp State Park invites you to embark on a journey of discovery and appreciation for the past and present."
 	)
@@ -351,7 +351,7 @@ require 'open-uri'
 		longitude: -122.435978,
 		latitude: 37.860097, 
 		capacity: 40, 
-		price: 60,
+		price: 8,
 		description: "
 		Nestled like a jewel in the heart of San Francisco Bay, Angel Island State Park stands as a captivating blend of natural beauty and historical significance. This enchanting destination boasts panoramic views of the city skyline, the iconic Golden Gate Bridge, and the surrounding bay waters. Accessible by ferry, the island offers a tranquil escape from the urban bustle, where visitors can immerse themselves in a unique blend of nature and culture. With its rich history as an immigration station that processed thousands of immigrants entering the United States, Angel Island holds a poignant narrative of the immigrant experience, which is vividly preserved through the various exhibits and guided tours."
 	)
@@ -373,7 +373,7 @@ require 'open-uri'
 		longitude: -122.109001,
 		latitude: 37.772644, 
 		capacity: 40, 
-		price: 30,
+		price: 6,
 		description: "Anthony Chabot Regional Park stands as a testament to the harmonious coexistence of nature and recreation in the heart of the San Francisco Bay Area. Spanning over 5,000 acres of rolling hills, lush valleys, and serene lakes, the park offers a haven of outdoor experiences for visitors of all ages. Situated just minutes from downtown Oakland, the park's accessibility is a gift to urban dwellers seeking refuge in the tranquility of nature. Hikers, bikers, and equestrians can explore a network of trails that wind through diverse landscapes, providing captivating views of the surrounding valleys and the shimmering waters of Lake Chabot."
 	)
 
@@ -393,7 +393,7 @@ require 'open-uri'
 		zip_code: 94517, 
 		longitude: -121.941125,
 		latitude: 37.881591, 
-		capacity: 40, 
+		capacity: 4, 
 		price: 20,
 		description: "Rising majestically from the surrounding California landscapes, Mount Diablo State Park stands as a beacon of natural beauty and recreational wonder. Situated just east of the San Francisco Bay Area, this iconic park offers an unforgettable experience for outdoor enthusiasts and nature lovers alike. The centerpiece of the park is Mount Diablo, a prominent peak that pierces the sky at over 3,800 feet, granting panoramic views that span from the Sierra Nevada to the Pacific coastline. The journey to the summit is an adventure in itself, with a network of trails winding through diverse ecosystems, from oak woodlands to grassy slopes adorned with vibrant wildflowers."
 	)
@@ -414,7 +414,7 @@ require 'open-uri'
 		zip_code: 94708, 
 		longitude: -122.242546,
 		latitude: 37.892767, 
-		capacity: 40, 
+		capacity: 8, 
 		price: 25,
 		description: "Hikers and nature enthusiasts find Tilden Park to be a true sanctuary. An intricate network of trails crisscross the landscape, ranging from easy strolls to challenging hikes that lead to panoramic viewpoints. The jewel of the park, Lake Anza, offers a picturesque setting for relaxation. Surrounded by verdant hills, this lake is perfect for swimming during the warmer months, and its sandy beach attracts families for picnics and sun-soaked fun. For a dose of nostalgia, the antique carousel in the heart of the park delights young and old alike, evoking a sense of whimsy and delight."
 	)
@@ -435,7 +435,7 @@ require 'open-uri'
 		zip_code: 94550, 
 		longitude: -121.711014,
 		latitude: 37.591392, 
-		capacity: 40, 
+		capacity: 6, 
 		price: 36,
 		description: "Del Valle Regional Park stands as a pristine oasis of outdoor recreation in the heart of California's East Bay. Spanning over 4,300 acres, this expansive park is a beloved destination for nature enthusiasts, families, and outdoor adventurers alike. At its heart lies the picturesque Del Valle Reservoir, a sprawling body of water framed by rolling hills and shaded picnic areas. Boating, fishing, and swimming are popular pastimes here, offering a refreshing escape from the hustle and bustle of urban life. The lakeshore's sandy beaches invite visitors to bask in the sun or take a leisurely dip in the cool waters, while the surrounding trails cater to hikers, bikers, and equestrians, offering varying levels of difficulty and breathtaking views."
 	)
@@ -456,7 +456,7 @@ require 'open-uri'
 		zip_code: 94555, 
 		longitude: -122.093731,
 		latitude: 37.553493, 
-		capacity: 40, 
+		capacity: 8, 
 		price: 40,
 		description: "Coyote Hills Regional Park stands as a captivating natural oasis in the heart of the bustling San Francisco Bay Area. Stretching over 978 acres, this park offers a diverse blend of landscapes, including rolling hills, expansive marshlands, and serene meadows, all of which are teeming with a rich array of plant and animal life. The park's unique topography not only provides a haven for a variety of bird species but also invites visitors to explore its network of trails, uncovering the hidden beauty of its marshes, wildflowers, and historic sites."
 	)
@@ -477,7 +477,7 @@ require 'open-uri'
 		zip_code: 94005, 
 		longitude: -122.43627,
 		latitude: 37.68899, 
-		capacity: 50, 
+		capacity: 4, 
 		price: 30,
 		description: "As a haven for local flora and fauna, San Bruno Mountain State Park offers a haven for both plant and animal species that are uniquely adapted to this coastal environment. Rare and endangered butterflies, such as the Mission Blue and Callippe Silverspot, find sanctuary here, flitting amidst the wildflowers and native grasses. The park's trails cater to a range of outdoor activities, from leisurely strolls to challenging hikes, inviting visitors to immerse themselves in the park's natural wonders while learning about its ecological significance."
 	)
@@ -498,7 +498,7 @@ require 'open-uri'
 		zip_code: 92328, 
 		longitude: -117.077206,
 		latitude: 36.505389, 
-		capacity: 50, 
+		capacity: 8, 
 		price: 39,
 		description: "Spanning across a vast expanse of the Mojave Desert, Death Valley National Park stands as a testament to the raw power and beauty of extreme landscapes. With its otherworldly terrain, scorching temperatures, and diverse geological formations, the park is a striking mosaic of salt flats, sand dunes, rugged mountains, and vast canyons. The shimmering Badwater Basin, the lowest point in North America, is a surreal landscape where the salt flats seem to stretch infinitely, creating an almost alien panorama. Amidst this seemingly inhospitable environment, remarkable adaptations and tenacious life forms have evolved to endure the harsh conditions, creating a delicate ecological balance that speaks to the resilience of life in the most challenging of habitats."
 	)
@@ -519,7 +519,7 @@ require 'open-uri'
 		zip_code: 92004, 
 		longitude: -116.282317,
 		latitude: 33.260221, 
-		capacity: 50, 
+		capacity: 6, 
 		price: 29,
 		description: "As the largest state park in California, Anza-Borrego offers a plethora of outdoor adventures for those willing to explore its untamed expanses. Hiking trails wind through narrow slot canyons, leading to hidden waterfalls and secluded pools. Jeep trails traverse the remote badlands, providing a sense of solitude amidst the barren beauty. The park's starlit skies are a haven for stargazers, offering unobstructed views of celestial wonders against the backdrop of the desert's tranquility."
 	)
@@ -540,7 +540,7 @@ require 'open-uri'
 		zip_code: 93920, 
 		longitude: -121.781158,
 		latitude: 36.247620, 
-		capacity: 50, 
+		capacity: 10, 
 		price: 44,
 		description: "Pfeiffer Big Sur State Park stands as a majestic testament to the raw beauty of California's central coast. With its sprawling wilderness of redwood groves, dramatic coastal cliffs, and serene riverbanks, the park creates an immersive experience that captures the essence of Big Sur's rugged charm. Towering ancient redwoods, some of which are more than 2,500 years old, create a cathedral-like ambiance as their colossal trunks stretch toward the heavens. The Big Sur River meanders through the park, offering a soothing backdrop for picnics, leisurely strolls, and even refreshing dips on warm days."
 	)
@@ -561,7 +561,7 @@ require 'open-uri'
 		zip_code: 92549, 
 		longitude: -116.730003,
 		latitude: 33.814461, 
-		capacity: 50, 
+		capacity: 10, 
 		price: 42,
 		description: "Mount San Jacinto State Park offers a captivating escape into the splendor of Southern California's natural diversity. Spanning across the rugged terrain of the San Jacinto Mountains, the park is a haven for outdoor enthusiasts and nature lovers. Its centerpiece is the majestic Mount San Jacinto, a towering peak that rises to over 10,800 feet, providing a dramatic backdrop for the park's varied ecosystems. With lush alpine forests, meadows adorned with wildflowers, and rocky landscapes, visitors can explore a range of environments as they ascend the mountain's trails. The park's accessible aerial tramway carries adventurers from the desert floor to the cooler heights, granting access to breathtaking vistas and a refreshing change of climate."
 	)
@@ -582,7 +582,7 @@ require 'open-uri'
 		zip_code: 96063, 
 		longitude: -121.511615,
 		latitude: 40.497660, 
-		capacity: 50, 
+		capacity: 4, 
 		price: 19,
 		description: "Lassen Volcanic National Park, a geological marvel located in Northern California, showcases the remarkable forces of nature that have shaped our planet. This dynamic landscape is defined by its captivating volcanic features, which include steaming fumaroles, boiling mud pots, and the awe-inspiring Lassen Peak, one of the world's largest plug dome volcanoes. The park serves as a living laboratory, offering visitors the chance to witness the ongoing processes that continue to mold the earth's surface. From the otherworldly Bumpass Hell geothermal area to the scenic beauty of Emerald Lake, the park is a testament to the raw power and beauty of natural forces."
 	)
@@ -603,7 +603,7 @@ require 'open-uri'
 		zip_code: 93001, 
 		longitude: -119.552003,
 		latitude: 34.006930, 
-		capacity: 50, 
+		capacity: 8, 
 		price: 24,
 		description: "Beyond its stunning underwater realms, Channel Islands National Park boasts a wealth of hiking trails that lead adventurers through diverse landscapes, from coastal bluffs adorned with vibrant wildflowers to peaceful canyons shaded by ancient oak trees. Each island tells a story of geological transformation, with evidence of volcanic activity and the forces that shaped the rugged terrain. Archaeological sites provide insights into the lives of indigenous peoples who once called these islands home, offering a glimpse into their rich history and connection to the land."
 	)
@@ -624,7 +624,7 @@ require 'open-uri'
 		zip_code: 95555, 
 		longitude: -124.023682,
 		latitude: 41.403164, 
-		capacity: 50, 
+		capacity: 8, 
 		price: 20,
 		description: "Prairie Creek Redwoods State Park, located in Northern California, is a captivating testament to the awe-inspiring grandeur of ancient redwood forests. This pristine wilderness is a sanctuary of towering trees, some of which have stood for centuries, reaching heights that seem to touch the heavens. The park's dense groves create a serene and mystical atmosphere, where dappled sunlight filters through the canopy, illuminating the vibrant undergrowth below. Visitors to Prairie Creek are treated to an immersive experience as they walk amidst these giant sentinels, their sheer size and age invoking a sense of wonder and reverence for the natural world."
 	)
@@ -645,7 +645,7 @@ require 'open-uri'
 		zip_code: 96134, 
 		longitude: -121.508183,
 		latitude: 41.714368, 
-		capacity: 50, 
+		capacity: 8, 
 		price: 10,
 		description: "Lava Beds National Monument offers an otherworldly journey into the depths of a volcanic landscape. This unique destination in Northern California's high desert showcases the raw power of geological forces. Home to over 700 lava tube caves, Lava Beds National Monument invites visitors to explore underground realms sculpted by ancient eruptions. These intricate caverns reveal a stunning display of formations, from stalactites and stalagmites to delicate mineral deposits, creating a mesmerizing and eerie environment that feels like stepping into a subterranean wonderland."
 	)
@@ -666,7 +666,7 @@ require 'open-uri'
 		zip_code: 93514, 
 		longitude: -118.613502,
 		latitude: 37.372283, 
-		capacity: 50, 
+		capacity: 6, 
 		price: 10,
 		description: "Lake Sabrina Campground is a serene oasis tucked away in the Eastern Sierra region of California. Surrounded by the towering peaks of the Sierra Nevada mountains, the campground offers a tranquil alpine retreat for nature enthusiasts and outdoor adventurers alike. The campground's proximity to Lake Sabrina provides campers with the opportunity to indulge in a variety of water-based activities, from fishing for trout in the pristine lake to kayaking or simply enjoying the peaceful ambiance of the water's edge. As the sun sets behind the rugged mountain horizon, the campground transforms into a stargazer's paradise, offering unobstructed views of the night sky far from the city lights."
 	)
@@ -687,7 +687,7 @@ require 'open-uri'
 		zip_code: 93542, 
 		longitude: -117.977241,
 		latitude: 35.966438, 
-		capacity: 50, 
+		capacity: 8, 
 		price: 39,
 		description: "The campground's proximity to numerous hiking trails allows adventurers to explore Lassen's remarkable geothermal features, from bubbling mud pots and steaming fumaroles to the awe-inspiring Devastated Area, a stark reminder of the area's volcanic past. As the day transitions into night, the absence of urban light pollution reveals a breathtaking canvas of stars above, making stargazing an unforgettable part of the Black Rock Campground experience. With basic amenities like restrooms and potable water available, campers can disconnect from the modern world and relish in the simple pleasures of a campfire-cooked meal and the camaraderie of fellow nature enthusiasts."
 	)
@@ -708,7 +708,7 @@ require 'open-uri'
 		zip_code: 93545, 
 		longitude: -118.132256,
 		latitude: 36.608913, 
-		capacity: 50, 
+		capacity: 8, 
 		price: 32,
 		description: "Perched at the foot of the Sierra Nevada's dramatic landscapes, Lone Pine Campground provides a rustic and natural camping experience. With clear, crisp air and the soothing sounds of nearby creeks, campers can enjoy a sense of tranquility that only the mountains can offer. The campground's proximity to the iconic Mount Whitney, the tallest peak in the contiguous United States, makes it a favored destination for hikers aiming to conquer its challenging trails. As the sun sets, the starry skies above the campground transform into a dazzling display, perfect for stargazing and contemplation."
 	)
@@ -729,7 +729,7 @@ require 'open-uri'
 		zip_code: 94956, 
 		longitude: -122.798463,
 		latitude: 38.039189, 
-		capacity: 40, 
+		capacity: 6, 
 		price: 64,
 		description: "Nestled along the rugged coastline of Northern California, Point Reyes National Seashore 
 		stands as a captivating tapestry of nature's finest creations. Encompassing over 70,000 acres of pristine 
