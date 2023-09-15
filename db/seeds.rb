@@ -475,8 +475,8 @@ require 'open-uri'
 		country: "United States", 
 		state: "California", 
 		zip_code: 94005, 
-		longitude: -122.419416,
-		latitude: 37.774929, 
+		longitude: -122.43627,
+		latitude: 37.68899, 
 		capacity: 50, 
 		price: 30,
 		description: "As a haven for local flora and fauna, San Bruno Mountain State Park offers a haven for both plant and animal species that are uniquely adapted to this coastal environment. Rare and endangered butterflies, such as the Mission Blue and Callippe Silverspot, find sanctuary here, flitting amidst the wildflowers and native grasses. The park's trails cater to a range of outdoor activities, from leisurely strolls to challenging hikes, inviting visitors to immerse themselves in the park's natural wonders while learning about its ecological significance."

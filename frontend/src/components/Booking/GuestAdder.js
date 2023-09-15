@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './GuestAdder.css';
 
-const GuestAdder = ({ onGuestChange }) => {
+const GuestAdder = ({ onGuestChange, capacity }) => {
 	const [adultCounter, setAdultCounter] = useState(1);
 	const [childrenCounter, setChildrenCounter] = useState(0);
 
@@ -27,7 +27,7 @@ const GuestAdder = ({ onGuestChange }) => {
 						-
 					</button>
 					<p> {adultCounter} </p>
-					<button className='add-button' onClick={() => setAdultCounter(adultCounter + 1)}>
+					<button className='add-button' onClick={() => adultCounter + childrenCounter < capacity ? setAdultCounter(adultCounter + 1) : null}>
 						+
 					</button>
 				</div>
@@ -44,7 +44,7 @@ const GuestAdder = ({ onGuestChange }) => {
 						-
 					</button>
 					<p> {childrenCounter} </p>
-					<button className='add-button' onClick={() => setChildrenCounter(childrenCounter + 1)}>
+					<button className='add-button' onClick={() => adultCounter + childrenCounter < capacity ? setChildrenCounter(childrenCounter + 1) : null}>
 						+
 					</button>
 				</div>

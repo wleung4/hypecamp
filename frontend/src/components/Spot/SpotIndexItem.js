@@ -7,8 +7,9 @@ const SpotIndexItem = ({ spot }) => {
 		<>
 			<div className='container'>
 				<div className='spots-index-item'>
-					<img src={spot?.photos[0]} className='item-photo'/>
-			
+					<Link to={`spots/${spot.id}`}>
+						<img src={spot?.photos[0]} className='item-photo'/>
+					</Link>
 					<div className='text-container'>
 						<p className='spot-rating'> 
 							<i className="fa-solid fa-thumbs-up" style={{fontSize: '16px'}}></i>

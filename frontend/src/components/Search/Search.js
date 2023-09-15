@@ -46,7 +46,7 @@ const Search = () => {
 		<>
 			<div className="search-background">
 				<div className='search-bar'>
-					<input className="search" placeholder="Search destinations"/>
+					<input className="search-bar-input" placeholder="Search destinations"/>
 					<div className='search-dates' onClick={handleDates}>
 						<i className="fa-solid fa-calendar"></i>
 						<p>{startDate && endDate ? `Start: ${formatDate(startDate)} | 

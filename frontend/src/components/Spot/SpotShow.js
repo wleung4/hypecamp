@@ -113,10 +113,10 @@ const SpotShow = () => {
 						{spot?.description}
 					</p>
 					<div className='show-activities'>
-						{/* Activities */}
+						Activities
 					</div>
 					<div className='show-amenities'>
-					{/* Amenities */}
+						Amenities
 					</div>
 				</div>
 
@@ -142,7 +142,7 @@ const SpotShow = () => {
 							<i className="fa-solid fa-user"></i>
 							<p>{adultCounter + childrenCounter} guests</p>
 							{guestAdder && (
-								<GuestAdder onGuestChange={onGuestChange}/>
+								<GuestAdder onGuestChange={onGuestChange} capacity={spot?.capacity}/>
 							)}
 							
 						</div>

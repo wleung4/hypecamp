@@ -1,6 +1,7 @@
 import { Wrapper } from '@googlemaps/react-wrapper';
 import { useEffect, useRef, useState } from 'react';
 import './map.css';
+import hypecampIcon from '../../assets/icon.png'
 
 const SpotMapIndex = ({ spots, mapOptions } ) => { 
 	const [map, setMap] = useState(null);
@@ -23,8 +24,12 @@ const SpotMapIndex = ({ spots, mapOptions } ) => {
 				if(!markers.current[spot.id]) {
 					const coordinates = new google.maps.LatLng(spot.latitude, spot.longitude);
 					marker = new google.maps.Marker({ position: coordinates, map: map, title: spot.name });
-	
+					const infowindow = new google.maps.InfoWindow({ content: spot.name });
+
 					markers.current[spot?.id] = marker;
+					marker.addListener('click', () => {
+						infowindow.open(map, markers.current[spot?.id]);
+					});
 				}
 			})
 		}
