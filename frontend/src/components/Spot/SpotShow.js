@@ -179,6 +179,8 @@ const SpotShow = () => {
 
 				<div className='show-reviews'>
 					<h2 className='reviews-head'>Reviews</h2>
+					{/* <h3>{console.log(spot?.rating)}</h3> */}
+					{/* <button className="spot-add-review-button">Add a review</button> */}
 				</div>
 			</div>
 			<Footer />
