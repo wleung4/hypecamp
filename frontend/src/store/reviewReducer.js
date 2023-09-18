@@ -59,7 +59,7 @@ export const createReview = review => async dispatch => {
 export const updateReview = review => async dispatch => {
 	const res = await fetch(`/api/reviews/${review.id}`, {
 		method: 'PATCH',
-		body: JSON.stringify(booking),
+		body: JSON.stringify(review),
 		headers: {
 			'Content-Type': 'application/json',
 			'X-CSRF-Token': sessionStorage.getItem('X-CSRF-Token')
@@ -91,7 +91,7 @@ const reviewReducer = (state = {}, action) => {
 			return { ...state, [action.review.id]: action.review };
 		case RECEIVE_REVIEWS:
 			return { ...action.reviews };
-		case REMOVE_REVIEWS:
+		case REMOVE_REVIEW:
 			const nextState = { ...state };
 			delete nextState[action.reviewId];
 			return nextState; 

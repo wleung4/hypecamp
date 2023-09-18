@@ -10,12 +10,14 @@ import { Modal } from "../../context/Modal";
 import LoginForm from "../LoginForm/LoginForm";
 import { Redirect } from "react-router-dom";
 import SpotMapWrapper from "../Map/SpotMapIndex";
+import ReviewItem from "../Review/ReviewItem";
+import { fetchReviews } from "../../store/reviewReducer";
 
 const SpotShow = () => {
 	const dispatch = useDispatch();
 	const { spotId } = useParams();
 	const spot = useSelector(getSpot(spotId));
-	// const photo = 'https://hypecamp-seeds.s3.us-west-1.amazonaws.com/cabin.jpg';
+	const reviews = useSelector();
 	const [calendar, setCalendar] = useState(false);
 	const [startDate, setStartDate] = useState(null);
 	const [endDate, setEndDate] = useState(null);
@@ -29,6 +31,7 @@ const SpotShow = () => {
 
 	useEffect(() => {
 		dispatch(fetchSpot(spotId));
+		dispatch(fetchReviews(spotId));
 	}, [spotId])
 
 	const onDatesChange = (startDate, endDate) => {
