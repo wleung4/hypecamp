@@ -151,7 +151,6 @@
 }
 
 .big-photo {
-	border: 1px solid black;
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -188,7 +187,7 @@
 	width: 76vw;
 	font-size: 18px;
 	display: flex;
-	gap: 10px;
+	gap: 2rem;
 }
 
 .show-description {

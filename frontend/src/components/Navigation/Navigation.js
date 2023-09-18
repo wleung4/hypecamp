@@ -27,7 +27,7 @@ const Navigation = () => {
 	return (
 		<nav className="navbar">
 			<NavLink exact to='/'>
-				<img src={logo} className="logo"/>
+				<img src={logo} className="nav-logo"/>
 			</NavLink>
 			<div className="links">
 				{sessionLinks}

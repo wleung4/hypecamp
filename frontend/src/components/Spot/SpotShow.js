@@ -12,6 +12,7 @@ import { Redirect } from "react-router-dom";
 import SpotMapWrapper from "../Map/SpotMapIndex";
 import ReviewItem from "../Review/ReviewItem";
 import { fetchReviews } from "../../store/reviewReducer";
+import Footer from "../Footer/Footer";
 
 const SpotShow = () => {
 	const dispatch = useDispatch();
@@ -180,6 +181,7 @@ const SpotShow = () => {
 					<h2 className='reviews-head'>Reviews</h2>
 				</div>
 			</div>
+			<Footer />
 		</>
 	)
 }

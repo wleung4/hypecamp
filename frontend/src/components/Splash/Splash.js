@@ -1,11 +1,10 @@
 import React from 'react';
-import Navigation from '../Navigation/Navigation';
 import Search from '../Search/Search';
 import './Splash.css';
 import heroImage from '../../assets/hero-image.jpg';
 import leftImage from '../../assets/splash-image-1.jpg';
 import rightImage from '../../assets/splash-image-2.jpg';
-
+import Footer from '../Footer/Footer';
 
 const Splash = () => {
 	return (
@@ -33,8 +32,8 @@ const Splash = () => {
 					<img src={leftImage} alt='' className='splash-images' />
 					<img src={rightImage} alt='' className='splash-images' />
 				</div>
-
 			</div>
+			<Footer />
 		</>
 
 	);

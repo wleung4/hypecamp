@@ -1,0 +1,23 @@
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 0.5rem;
+	background-color: #333121;
+	color: whitesmoke;
+}
+
+.footer-text {
+	font-size: 20px;
+}
+
+.footer-about-links {
+	width: 8%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.footer-about-links-icon {
+	height: 50px;
+	width: 50px;
+}

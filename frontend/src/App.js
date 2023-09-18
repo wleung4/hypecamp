@@ -6,6 +6,7 @@ import SpotShow from './components/Spot/SpotShow';
 import UserBookings from './components/UserBookings/UserBookings';
 import './index.css';
 import Navigation from './components/Navigation/Navigation';
+import Footer from './components/Footer/Footer';
  
 function App() {
 //   const spots = useSelector(state => state.spots)

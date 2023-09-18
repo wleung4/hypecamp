@@ -1,6 +1,7 @@
 import { Wrapper } from '@googlemaps/react-wrapper';
 import { useEffect, useRef, useState } from 'react';
-import './map.css';
+import { NavLink } from 'react-router-dom';
+import './Map.css';
 
 const SpotMapIndex = ({ spots, mapOptions } ) => { 
 	const [map, setMap] = useState(null);
@@ -33,7 +34,7 @@ const SpotMapIndex = ({ spots, mapOptions } ) => {
 						if (windowOpened) {
 							infowindow.close();
 						}
-
+						// const infoContent = `<a href="/spots/${spot?.id}"}> ${spot?.name} </a>`;
 						infowindow.setContent(spot?.name);
 						map.panTo(markers.current[spot?.id].getPosition());
 						infowindow.open(map, markers.current[spot?.id]);
