@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 	resource :session, only: [:show, :create, :destroy]
 	resources :spots, only: [:index, :show]
 	resources :bookings, only: [:index, :show, :create, :destroy, :update]
+	resources :reviews, only: [:index, :show, :create, :destroy, :update]
   end
 
   get '*path', 

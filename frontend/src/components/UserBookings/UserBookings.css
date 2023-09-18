@@ -37,6 +37,7 @@
 	height: 100%;
 	width: 100%;
 	border-radius: 10px;
+	object-fit: cover;
 }
 
 .booking-div-text {
@@ -175,14 +176,12 @@
 .confirm-edit {
 	background-color: #cf512e;
 	border: none;
-	width: 5vw;
-	height: 5vh;
+	width: 80%;
+	height: 8%;
 	font-size: 20px;
 	font-weight: 600;
 	text-align: center;
-	align-self: flex-start;
-	margin-left: 4.5vw;
-	border: 1px solid black;
+	border: 1px solid lightgray;
 	border-radius: 10px;
 	color: white;
 }

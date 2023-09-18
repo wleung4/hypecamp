@@ -17,7 +17,7 @@ const SpotShow = () => {
 	const dispatch = useDispatch();
 	const { spotId } = useParams();
 	const spot = useSelector(getSpot(spotId));
-	const reviews = useSelector();
+	// const reviews = useSelector();
 	const [calendar, setCalendar] = useState(false);
 	const [startDate, setStartDate] = useState(null);
 	const [endDate, setEndDate] = useState(null);
