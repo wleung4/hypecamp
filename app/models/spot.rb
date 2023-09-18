@@ -39,4 +39,12 @@ class Spot < ApplicationRecord
 		source: :spot
 
 	has_many_attached :photos
+
+	def rating
+		return nil if reviews.any?
+
+		sum = 0.0
+		reviews.each { |review| sum += review.rating }
+		(sum / reviews.length).truncate(2)
+	end
 end
