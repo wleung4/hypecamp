@@ -17,8 +17,14 @@ export const getSpots = state => state.spots ? state.spots : null;
 export const getSpot = spotId => state => state.spots ? state.spots[spotId] : null;
 
 
-export const fetchSpots = () => async dispatch => {
-	const res = await fetch('/api/spots');
+export const fetchSpots = params => async dispatch => {
+	let baseUrl = '/api/spots?';
+
+	for(let key in params) {
+		baseUrl += `${key}=${params[key]}&`;
+	}
+
+	const res = await fetch(baseUrl);
 	
 	if(res.ok) {
 		const spots = await res.json();
