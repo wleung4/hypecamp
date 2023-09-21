@@ -13,6 +13,9 @@ import SpotMapWrapper from "../Map/SpotMapIndex";
 import ReviewItem from "../Review/ReviewItem";
 import { fetchReviews } from "../../store/reviewReducer";
 import Footer from "../Footer/Footer";
+import activitiesPng from "../../assets/activities.PNG";
+import featuresPng from "../../assets/features.PNG";
+
 
 const SpotShow = () => {
 	const dispatch = useDispatch();
@@ -118,9 +121,11 @@ const SpotShow = () => {
 					</p>
 					<div className='show-activities'>
 						Activities
+						<img src={activitiesPng} alt="" className='show-png'/>
 					</div>
 					<div className='show-amenities'>
-						Amenities
+						Features
+						<img src={featuresPng} alt="" className='show-png'/>
 					</div>
 				</div>
 

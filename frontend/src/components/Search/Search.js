@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import fetchSpots from '../../store/reviewReducer';
 
 const Search = () => {
-	const [searchParams, setSearchParams] = useState({});
+	const [searchParams, setSearchParams] = useState({ search: ''});
 	const [startDate, setStartDate] = useState(null);
 	const [endDate, setEndDate] = useState(null);
 	const [calendar, setCalendar] = useState(false);

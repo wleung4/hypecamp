@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './Spot.css';
 
-const SpotIndexItem = ({ spot }) => {
+const SpotIndexItem = ({ spot, highlightedSpot, setHighlightedSpot }) => {
 	return (
 		<>
-			<div className='container'>
+			<div className={spot === highlightedSpot ? "container spot-highlighted" : "container"}
+				 onMouseEnter={() => setHighlightedSpot(spot)} onMouseLeave={() => setHighlightedSpot(null)} >
 				<div className='spots-index-item'>
 					<Link to={`spots/${spot.id}`}>
 						<img src={spot?.photos[0]} className='item-photo'/>

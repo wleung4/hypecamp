@@ -4,10 +4,12 @@ import { fetchSpots, getSpots } from '../../store/spotReducer';
 import { useEffect } from 'react';
 import SpotIndexItem from './SpotIndexItem';
 import SpotMapWrapper from '../Map/SpotMapIndex';
+import { useState } from 'react';
 
 const SpotIndex = () => {
 	const dispatch = useDispatch();
 	const spots = useSelector(getSpots);
+	const [highlightedSpot, setHighlightedSpot] = useState(null);
 
 	useEffect(() => {
 		dispatch(fetchSpots(spots));
@@ -15,7 +17,8 @@ const SpotIndex = () => {
 
 	const handleSpots = () => {
 		const allSpots = Object.values(spots).map(spot => {
-			return <SpotIndexItem key={spot.id} spot={spot}/>
+			return <SpotIndexItem key={spot.id} spot={spot} highlightedSpot={highlightedSpot} 
+				setHighlightedSpot={setHighlightedSpot}/>
 		})
 		return allSpots;
 	}
@@ -28,7 +31,8 @@ const SpotIndex = () => {
 				</div>
 
 				<div className='spots-index-map'>
-					<SpotMapWrapper spots={spots} />
+					<SpotMapWrapper spots={spots} highlightedSpot={highlightedSpot} 
+						setHighlightedSpot={setHighlightedSpot}/>
 				</div>
 			</div>
 		</>
