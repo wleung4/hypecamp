@@ -19,8 +19,6 @@ const Search = () => {
 	const history = useHistory();
 
 	const onDatesChange = (startDate, endDate) => {
-		console.log(startDate)
-		console.log(endDate)
 		setStartDate(startDate);
 		setEndDate(endDate);
 	}

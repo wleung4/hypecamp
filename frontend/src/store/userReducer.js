@@ -17,7 +17,6 @@ export const fetchUser = userId => async dispatch => {
 
 	if (res.ok) {
 		const user = await res.json();
-		console.log(user)
 		dispatch(receiveUser(user))
 	}
 } 

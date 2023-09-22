@@ -6,8 +6,6 @@ const GuestAdder = ({ onGuestChange, capacity }) => {
 	const [childrenCounter, setChildrenCounter] = useState(0);
 
 	useEffect(() => {
-		console.log('adult:', adultCounter)
-		console.log('child:', childrenCounter)
 		onGuestChange(adultCounter, childrenCounter)
 	}, [adultCounter, childrenCounter])
 
