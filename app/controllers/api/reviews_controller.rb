@@ -1,7 +1,7 @@
 class Api::ReviewsController < ApplicationController
 
 	def index
-		@reviews = Spot.find(params[:spot_id]).reviews
+		@reviews = Review.all
 		render :index
 	end
 
@@ -42,6 +42,6 @@ class Api::ReviewsController < ApplicationController
 
 	private
 	def review_params
-		params.require(:review).permit(:spot_id, :user_id, :date, :rating, :body)
+		params.require(:review).permit(:spot_id, :user_id, :rating, :body)
 	end
 end
