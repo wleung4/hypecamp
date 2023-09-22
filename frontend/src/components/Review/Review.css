@@ -1,0 +1,47 @@
+.review-form-container {
+	width: 100%;
+	height: 100%;
+	padding: 1rem 2rem;
+}
+
+.review-form-head {
+	font-weight: 700;
+	font-size: 48px;
+}
+
+.review-options {
+	display: flex;
+	justify-content: space-evenly;
+	gap: 1rem;
+}
+
+.review-recommendation {
+	border-radius: 10px;
+	box-sizing: border-box;
+	width: 50%;
+	height: 25%;
+	text-align: center;
+	background-color: lightgray;
+}
+
+.review-recommendation:hover {
+	cursor: pointer;
+}
+
+.review-text-area {
+	width: 100%;
+	height: 40%;
+	padding: 4px 4px;
+}
+
+.review-create-review {
+	width: 100%;
+	color: white;
+	background-color: #cf512e;
+	border-radius: 10px;
+	border: lightgray;
+}
+
+.review-create-review:hover {
+	background-color: #9b3a20;
+}

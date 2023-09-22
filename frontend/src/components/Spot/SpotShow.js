@@ -15,7 +15,7 @@ import { fetchReviews } from "../../store/reviewReducer";
 import Footer from "../Footer/Footer";
 import activitiesPng from "../../assets/activities.PNG";
 import featuresPng from "../../assets/features.PNG";
-
+import ReviewForm from "../Review/ReviewForm";
 
 const SpotShow = () => {
 	const dispatch = useDispatch();
@@ -32,6 +32,7 @@ const SpotShow = () => {
 	const [loginModal, setLoginModal] = useState(false);
 	const [redirect, setRedirect] = useState(false);
 	const [error, setError] = useState([]);
+	const [reviewModal, setReviewModal] = useState(false);
 
 	useEffect(() => {
 		dispatch(fetchSpot(spotId));
@@ -90,6 +91,15 @@ const SpotShow = () => {
 			setLoginModal(true);
 		}
 
+	}
+
+	const handleAddReviewClick = e => {
+		e.preventDefault();
+		setReviewModal(true);
+	}
+
+	const closeReviewModal = () => {
+		setReviewModal(false);
 	}
 
 	return (
@@ -185,7 +195,12 @@ const SpotShow = () => {
 				<div className='show-reviews'>
 					<h2 className='reviews-head'>Reviews</h2>
 					{/* <h3>{console.log(spot?.rating)}</h3> */}
-					{/* <button className="spot-add-review-button">Add a review</button> */}
+					<button className="spot-add-review-button" onClick={handleAddReviewClick}>Add a review</button>
+					{reviewModal && (
+						<Modal onClose={closeReviewModal}>
+							<ReviewForm onClose={closeReviewModal}/>
+						</Modal>
+					)}
 				</div>
 			</div>
 			<Footer />

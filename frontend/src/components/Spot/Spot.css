@@ -307,6 +307,7 @@
 
 .spot-highlighted {
 	box-shadow: 0 0 10px lightgray;
+	border-radius: 10px;
 }
 
 .show-activities, .show-amenities {
@@ -315,6 +316,5 @@
 	align-items: center;
 }
 .show-png {
-	width: 60%;
-	height: 90%;
+	width: 55%;
 }
