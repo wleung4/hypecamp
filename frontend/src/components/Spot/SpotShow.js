@@ -21,7 +21,6 @@ const SpotShow = () => {
 	const dispatch = useDispatch();
 	const { spotId } = useParams();
 	const spot = useSelector(getSpot(spotId));
-	// const reviews = useSelector(state => Object.values(state.reviews).filter(review => review?.spotId === spotId));
 	const reviews = useSelector(state => state.reviews);
 	const [calendar, setCalendar] = useState(false);
 	const [startDate, setStartDate] = useState(null);
@@ -40,6 +39,7 @@ const SpotShow = () => {
 		dispatch(fetchReviews(spotId));
 	}, [spotId])
 
+	
 	const onDatesChange = (startDate, endDate) => {
 		setStartDate(startDate);
 		setEndDate(endDate);
@@ -105,9 +105,23 @@ const SpotShow = () => {
 
 	const handleSpotReviews = () => {
 		const spotReviews = Object.values(reviews).map(review => {
+			// sum += review.rating;
 			return <ReviewItem key={review.id} review={review} />
 		})
+		// setRating(sum / reviews.length * 1.0);
 		return spotReviews;
+	}
+
+	const handleRating = () => {
+		if (reviews.length === 0) return 0;
+		let sum = 0;
+
+		for (let key in reviews) {
+			sum += reviews[key].rating;
+		}
+
+		const avg = 1.0 * sum / Object.keys(reviews).length;
+		return Math.floor(avg);
 	}
 
 	return (
@@ -117,8 +131,8 @@ const SpotShow = () => {
 					<h2 className='show-header'>{spot?.name}</h2>
 					<div className='show-header-text'>
 						<i className="fa-solid fa-thumbs-up" style={{fontSize: '20px'}}></i>
-						<p className='percentage'>100%</p> 
-						<p className='num-reviews'>42 reviews</p>
+						<p className='percentage'>{handleRating()}%</p> 
+						<p className='num-reviews'>{Object.keys(reviews).length} reviews</p>
 						<p className='city-state'>{spot?.city}, {spot?.state}</p>
 					</div>
 				</div>

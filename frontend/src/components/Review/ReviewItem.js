@@ -15,10 +15,9 @@ const ReviewItem = ({ review }) => {
 	return (
 		<div className='review-item-container'>
 			<div className='review-item-header'>
-				<img src='' alt='' className='review-item-profile-icon'/>
 				<div className='review-item-name'>
-					{user?.username}
-					{review?.rating === 100 ? 'Recommends' : 'Does not Recommend'}
+					<span className='review-item-reviewer-name'>{user?.username}</span>
+					{review?.rating === 100 ? ' recommends' : ' doesn\'t recommend'}
 				</div>
 			</div>
 			<div className='review-item-body'>

@@ -283,7 +283,6 @@
 
 /* show review */
 .show-reviews {
-	height: 60vh;
 	width: 76vw;
 	border-radius: 16px;
 }
@@ -320,7 +319,7 @@
 }
 
 .show-review-items {
-	height: 100%;
+	/* height: 100%; */
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;

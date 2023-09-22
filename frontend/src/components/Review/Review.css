@@ -81,7 +81,18 @@
 .review-item-container {
 	height: 50%;
 	width: 50%;
-	border: 1px solid black;
 	box-sizing: border-box;
-	background-color: aquamarine;
+	padding: 1rem 1rem;
+}
+
+.review-item-name {
+	font-size: 20px;
+}
+
+.review-item-body {
+	font-size: 20px;
+}
+
+.review-item-reviewer-name {
+	font-weight: bold;
 }
