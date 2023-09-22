@@ -113,14 +113,14 @@ const SpotShow = () => {
 	}
 
 	const handleRating = () => {
-		if (reviews.length === 0) return 0;
+		if (Object.keys(reviews).length === 0) return 0;
 		let sum = 0;
 
 		for (let key in reviews) {
 			sum += reviews[key].rating;
 		}
 
-		const avg = 1.0 * sum / Object.keys(reviews).length;
+		const avg = (1.0 * sum) / Object.keys(reviews).length;
 		return Math.floor(avg);
 	}
 
