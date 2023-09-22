@@ -31,8 +31,14 @@ export const fetchReview = reviewId => async dispatch => {
 	}
 }
 
-export const fetchReviews = () => async dispatch => {
-	const res = await fetch('/api/reviews');
+export const fetchReviews = spotId => async dispatch => {
+	let baseUrl = '/api/reviews';
+
+	if(spotId) {
+		baseUrl += `?spot_id=${spotId}`;
+	}
+
+	const res = await fetch(baseUrl);
 
 	if(res.ok) {
 		const reviews = await res.json();

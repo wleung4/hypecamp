@@ -318,3 +318,10 @@
 .show-png {
 	width: 55%;
 }
+
+.show-review-items {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}

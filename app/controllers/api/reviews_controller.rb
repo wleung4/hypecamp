@@ -1,7 +1,11 @@
 class Api::ReviewsController < ApplicationController
 
 	def index
-		@reviews = Review.all
+		if params[:spot_id]
+			@reviews = Review.where(spot_id: params[:spot_id])
+		else
+			@reviews = Review.all
+		end
 		render :index
 	end
 

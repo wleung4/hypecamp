@@ -21,6 +21,7 @@ const SpotShow = () => {
 	const dispatch = useDispatch();
 	const { spotId } = useParams();
 	const spot = useSelector(getSpot(spotId));
+	// const reviews = useSelector(state => Object.values(state.reviews).filter(review => review?.spotId === spotId));
 	const reviews = useSelector(state => state.reviews);
 	const [calendar, setCalendar] = useState(false);
 	const [startDate, setStartDate] = useState(null);
@@ -100,6 +101,13 @@ const SpotShow = () => {
 
 	const closeReviewModal = () => {
 		setReviewModal(false);
+	}
+
+	const handleSpotReviews = () => {
+		const spotReviews = Object.values(reviews).map(review => {
+			return <ReviewItem key={review.id} review={review} />
+		})
+		return spotReviews;
 	}
 
 	return (
@@ -194,8 +202,11 @@ const SpotShow = () => {
 
 				<div className='show-reviews'>
 					<h2 className='reviews-head'>Reviews</h2>
-					{/* <h3>{console.log(spot?.rating)}</h3> */}
+					<h3>{spot?.rating}</h3>
 					<button className="spot-add-review-button" onClick={handleAddReviewClick}>Add a review</button>
+					<div className='show-review-items'>
+						{handleSpotReviews()}
+					</div>
 					{reviewModal && (
 						<Modal onClose={closeReviewModal}>
 							<ReviewForm onClose={closeReviewModal}/>
