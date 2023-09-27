@@ -12,6 +12,7 @@ const ReviewForm = ({ onClose }) => {
 	const { spotId } = useParams();
 	const [loginModal, setLoginModal] = useState(false);
 	const user = useSelector(state => state.session.user);
+	const [errors, setErrors] = useState('');
 	const dispatch = useDispatch();
 
 	const handleOnClose = () => {
@@ -29,12 +30,14 @@ const ReviewForm = ({ onClose }) => {
 			}));
 			setSelectedOption(null);
 			setReviewBody('')
+			setErrors('');
 			onClose();
 		} else {
+			setErrors('Please fill out all parts of the review form');
 			setLoginModal(true);
+			return;
 		}
 	}
-
 	
 	return (
 		<>
@@ -48,6 +51,7 @@ const ReviewForm = ({ onClose }) => {
 				</div>
 				<textarea className='review-text-area' onChange={e => setReviewBody(e.target.value)} placeholder='Enter review here'/>
 				<button className='review-create-review' onClick={handleSubmit}>Create review</button>
+				{errors}
 			</div>
 			{loginModal && !user && (
 				<Modal onClose={handleOnClose}>
