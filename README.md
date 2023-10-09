@@ -31,4 +31,3 @@ The key feature for this application is the booking feature. When a user reaches
 
 **Search** - Users are able to utilize the search bar to search for spots near a city.
 
-**Reviews** - Users are able to leave reviews for spots that they have been to.
