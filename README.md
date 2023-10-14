@@ -26,8 +26,8 @@ Checkout out Hypecamp here: [https://hypecamp-hbpd.onrender.com/](https://hypeca
 ## Key Feature
 The key feature for this application is the booking feature. When a user reaches the individual spot page, they can book the spot from a start date to an end date. It will require a user to be logged in in order to be actual make a booking. Upon successful booking, it will redirect the user to the user's booking page.
 ![](./frontend/assets/booking.gif)
-
+<!--
 ## Future Features
 
 **Search** - Users are able to utilize the search bar to search for spots near a city.
-
+-->
