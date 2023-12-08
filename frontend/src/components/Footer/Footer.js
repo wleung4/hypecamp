@@ -5,7 +5,7 @@ import linkedin from '../../assets/linkedin.png';
 const Footer = () => {
 	return (
 		<div className='footer-container'>
-			<span className='footer-text'>&copy; Hipcamp 2023</span>
+			<span className='footer-text'>&copy; Hypecamp 2023</span>
 			<div className='footer-about-links'>
 				<a href='https://github.com/wleung4/' target='_blank'>
 					<img src={github} alt='' className='footer-about-links-icon'/>
